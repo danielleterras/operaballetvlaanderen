@@ -5,12 +5,11 @@ import "./App.css";
 import Stories from "./components/Stories";
 
 function App() {
-	return (
-		<>
-			<h1>testing</h1>
-			<Stories />
-		</>
-	);
+  return (
+    <>
+      <Stories />
+    </>
+  );
 }
 
 export default App;

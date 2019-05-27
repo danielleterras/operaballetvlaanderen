@@ -5,7 +5,6 @@ class Api {
 
   getAll = async () => {
     const r = await fetch(`/${this.entity}`);
-    // const r = await fetch(`/api/${this.entity}`);
     return await r.json();
   };
 

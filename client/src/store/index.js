@@ -20,8 +20,11 @@ class Store {
       .then(storyValues => newStory.updateFromServer(storyValues));
   };
 
-  _addStory = ({ title, _id }) => {
-    const story = new Story(title, _id);
+  _addStory = values => {
+    console.log(values);
+
+    const story = new Story();
+    story.updateFromServer(values);
     runInAction(() => this.stories.push(story));
   };
 }
