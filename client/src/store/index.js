@@ -6,11 +6,11 @@ class Store {
 	stories = [];
 
 	constructor() {
-		this.api = new Api();
+		this.api = new Api(`stories`);
 		this.api.getAll().then(d => d.forEach(this._addStory));
 	}
 
-	addStory = async story => {
+	addStory = story => {
 		const newStory = new Story(story.title);
 		this.stories.push(newStory);
 		this.api
