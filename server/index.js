@@ -1,24 +1,24 @@
 const express = require('express');
-const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
+const path = require('path');
 
 mongoose
   .connect(process.env.DB_URL, {
     useNewUrlParser: true,
-    useFindAndModify: false
+    useFindAndModify: false,
+    useCreateIndex: true
   })
   .then(() => console.log('db connected'))
   .catch(e => {
     console.log('Error, exiting', e);
     process.exit();
   });
-
 const app = express();
 
-app.use(express.static(path.resolve(__dirname, '../client/build/')));
+app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -29,8 +29,9 @@ require('./app/routes/stories.routes.js')(app);
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
+
 app.get('/', (req, res) => {
-  res.json({message: 'up and running'});
+  res.send({message: 'up and running'});
 });
 
 app.listen(process.env.PORT, () => {

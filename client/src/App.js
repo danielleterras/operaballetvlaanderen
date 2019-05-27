@@ -9,21 +9,21 @@ import Stories from "./components/Stories";
 import About from "./containers/About";
 
 function App() {
-  return (
-    <>
-      <Navigation />
-      <Switch>
-        <Route path={ROUTES.stories} component={Stories} />
-        <Route path={ROUTES.about} component={About} />
-        <Route
-          path={ROUTES.landing}
-          exact
-          strict
-          render={() => <>Welcome Home.</>}
-        />
-      </Switch>
-    </>
-  );
+	return (
+		<>
+			<Navigation />
+			<Switch>
+				<Route path={ROUTES.verhalen} component={Stories} />
+				<Route path={ROUTES.about} component={About} />
+				<Route
+					path={ROUTES.landing}
+					exact
+					strict
+					render={() => <>Welcome Home.</>}
+				/>
+			</Switch>
+		</>
+	);
 }
 
 export default withRouter(App);

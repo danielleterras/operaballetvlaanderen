@@ -1,6 +1,6 @@
 export const ROUTES = {
-  landing: `/`,
-  performances: `/performances`,
-  stories: `/stories`,
-  about: `/about`
+	landing: `/`,
+	performances: `/performances`,
+	stories: `/stories`,
+	about: `/about`
 };
