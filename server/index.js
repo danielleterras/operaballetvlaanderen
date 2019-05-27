@@ -18,20 +18,19 @@ mongoose
 
 const app = express();
 
+app.use(express.static(path.resolve(__dirname, '../client/build/')));
+
 app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-app.use(express.static(path.resolve(__dirname, '../client/build/')));
-
 require('./app/routes/stories.routes.js')(app);
-
-app.get('/', (req, res) => {
-  res.json({message: 'up and running'});
-});
 
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+});
+app.get('/', (req, res) => {
+  res.json({message: 'up and running'});
 });
 
 app.listen(process.env.PORT, () => {
