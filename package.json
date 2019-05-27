@@ -1,16 +1,16 @@
 {
-  "name": "production-demo",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:danielleterras/operaballetvlaanderen.git",
-  "author": "Daniëlle Terras <danielle.terras@student.howest.be>",
-  "license": "MIT",
-  "scripts": {
-    "start": "cd server/ && yarn && yarn start",
-    "build": "cd client/ && yarn && yarn build"
-  },
-  "cacheDirectories": [
-    "client/node_modules",
-    "server/node_modules"
-  ]
+	"name": "production-demo",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "git@github.com:danielleterras/operaballetvlaanderen.git",
+	"author": "Daniëlle Terras <danielle.terras@student.howest.be>, Sara Huyghe <sara.huyghe@student.howest.be>",
+	"license": "MIT",
+	"scripts": {
+		"start": "cd server/ && yarn && yarn start",
+		"build": "cd client/ && yarn && yarn build"
+	},
+	"cacheDirectories": [
+		"client/node_modules",
+		"server/node_modules"
+	]
 }
