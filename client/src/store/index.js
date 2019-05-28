@@ -1,11 +1,10 @@
 import StoriesStore from "./StoriesStore";
 
 class RootStore {
-	constructor() {
-		console.log("dsgfdg");
-		this.storiesStore = new StoriesStore(this);
-		console.log("testretfd");
-	}
+  constructor() {
+    this.storiesStore = new StoriesStore(this);
+    //console.log(this.storiesStore);
+  }
 }
 
 export default new RootStore();

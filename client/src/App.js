@@ -8,7 +8,7 @@ import Navigation from "./components/index.js";
 import Stories from "./components/Stories";
 import About from "./containers/About";
 
-function App() {
+const App = () => {
   return (
     <>
       <Navigation />
@@ -24,6 +24,6 @@ function App() {
       </Switch>
     </>
   );
-}
+};
 
 export default withRouter(App);
