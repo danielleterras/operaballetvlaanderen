@@ -1,8 +1,9 @@
 import React from "react";
 import { inject, observer, PropTypes } from "mobx-react";
 
-const Stories = ({ store }) => {
-	const { stories } = store;
+const Stories = ({ storiesStore }) => {
+	// console.log(store);
+	const { stories } = storiesStore;
 	const typeInput = React.createRef();
 	const genreInput = React.createRef();
 
@@ -14,7 +15,7 @@ const Stories = ({ store }) => {
 
 	const handleSubmit = e => {
 		e.preventDefault();
-		store.addStory({
+		storiesStore.addStory({
 			type: typeInput.current.value,
 			genre: genreInput.current.value,
 
@@ -90,7 +91,7 @@ const Stories = ({ store }) => {
 };
 
 Stories.propTypes = {
-	store: PropTypes.observableObject.isRequired
+	storiesStore: PropTypes.observableObject.isRequired
 };
 
-export default inject("store")(observer(Stories));
+export default inject("storiesStore")(observer(Stories));

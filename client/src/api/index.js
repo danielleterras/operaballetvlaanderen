@@ -4,17 +4,12 @@ class Api {
 	}
 
 	getAll = async () => {
-		console.log("testing");
-		// const r = await fetch(`/${this.entity}`);
-
 		const r = await fetch(`/api/${this.entity}`);
-		console.log(r);
 		return await r.json();
 	};
 
 	create = async story => {
 		const r = await fetch(
-			// `/${this.entity}`,
 			`/api/${this.entity}`,
 			this.getOptions("post", story.values)
 		);

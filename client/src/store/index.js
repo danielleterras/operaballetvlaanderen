@@ -1,37 +1,11 @@
-import { decorate, observable, action, runInAction, configure } from "mobx";
-import Story from "./../models/Story";
-import Api from "./../api";
+import StoriesStore from "./StoriesStore";
 
-configure({ enforceActions: `observed` });
-
-class Store {
-	stories = [];
-
+class RootStore {
 	constructor() {
-		this.api = new Api(`stories`);
-		this.api.getAll().then(d => d.forEach(this._addStory));
+		console.log("dsgfdg");
+		this.storiesStore = new StoriesStore(this);
+		console.log("testretfd");
 	}
-
-	addStory = ({ type, author, genre, story, title, synopsis }) => {
-		const newStory = new Story(type, genre, author, title, synopsis, story);
-		console.log(newStory);
-		this.stories.push(newStory);
-		this.api
-			.create(newStory)
-			.then(storyValues => newStory.updateFromServer(storyValues));
-	};
-
-	_addStory = values => {
-		// console.log(values);
-		const story = new Story();
-		story.updateFromServer(values);
-		runInAction(() => this.stories.push(story));
-	};
 }
 
-decorate(Store, {
-	stories: observable,
-	addStory: action
-});
-
-export default new Store();
+export default new RootStore();
