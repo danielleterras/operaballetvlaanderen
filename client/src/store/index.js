@@ -1,10 +1,8 @@
 import StoriesStore from "./StoriesStore";
-
 class RootStore {
-  constructor() {
-    this.storiesStore = new StoriesStore(this);
-    //console.log(this.storiesStore);
-  }
+	constructor() {
+		this.storiesStore = new StoriesStore(this);
+	}
 }
 
 export default new RootStore();

@@ -734,6 +734,14 @@
     "@babel/helper-regex" "^7.4.4"
     regexpu-core "^4.5.4"
 
+"@babel/polyfill@^7.2.5":
+  version "7.4.4"
+  resolved "https://registry.yarnpkg.com/@babel/polyfill/-/polyfill-7.4.4.tgz#78801cf3dbe657844eeabf31c1cae3828051e893"
+  integrity sha512-WlthFLfhQQhh+A2Gn5NSFl0Huxz36x86Jn+E9OW7ibK8edKPq+KLy4apM1yDpQ8kJOVi1OVjpP4vSDLdrI04dg==
+  dependencies:
+    core-js "^2.6.5"
+    regenerator-runtime "^0.13.2"
+
 "@babel/preset-env@7.3.1":
   version "7.3.1"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.3.1.tgz#389e8ca6b17ae67aaf9a2111665030be923515db"
@@ -1016,6 +1024,14 @@
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.2.tgz#63985d3d8b02530e0869962f4da09142ee8e200e"
   integrity sha512-n/VQ4mbfr81aqkx/XmVicOLjviMuy02eenSdJY33SVA7S2J42EU0P1H0mOogfYedb3wXA0d/LVtBrgTSm04WEA==
+
+"@fullpage/react-fullpage@0.1.13":
+  version "0.1.13"
+  resolved "https://registry.yarnpkg.com/@fullpage/react-fullpage/-/react-fullpage-0.1.13.tgz#49979f60f84fb351ec09383339627ca0e0bfedf2"
+  integrity sha512-kpN98n/qTpYrR8dx/jP9pU6ry9qO99e1iU1cNSmzPAdr1PyGOfg5X2lYtbX71WlPBX66G1oFN6PMJxkelGqxyw==
+  dependencies:
+    "@babel/polyfill" "^7.2.5"
+    fullpage.js "^3.0.4"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -5653,6 +5669,11 @@ fstream@^1.0.0, fstream@^1.0.12:
     inherits "~2.0.0"
     mkdirp ">=0.5 0"
     rimraf "2"
+
+fullpage.js@^3.0.4:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/fullpage.js/-/fullpage.js-3.0.5.tgz#ed223ec81ea354bffcac37c24c946981a1124171"
+  integrity sha512-80zJ12tqIkwNgVRnrJiP2RDy1okF9wXj5I7BDg5dsJcHCpgzb052ATCjz+3g7Zp1fjGsaDmEu1m92MafGqcO3w==
 
 function-bind@^1.0.2, function-bind@^1.1.1:
   version "1.1.1"
