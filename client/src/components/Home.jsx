@@ -4,6 +4,7 @@ import "fullpage.js/vendors/scrolloverflow"; // Optional. When using scrollOverf
 import ReactFullpage from "@fullpage/react-fullpage";
 
 import Stories from "./Stories";
+import Cube from "./Cube";
 import Performances from "./Performances";
 
 import "./styles.css";
@@ -17,7 +18,10 @@ class FullpageWrapper extends Component {
 				render={() => {
 					return (
 						<div>
-							<div className="section">Cube needs to go here</div>
+							<div className="section">
+								Cube needs to go here
+								<Cube />
+							</div>
 							<div className="section">
 								<Stories />
 							</div>
