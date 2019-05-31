@@ -18,10 +18,9 @@ class FullpageWrapper extends Component {
 				render={() => {
 					return (
 						<div>
-							<div className="section">
-								Cube needs to go here
-								<Cube />
-							</div>
+							{/* <div className="section"> */}
+							<Cube />
+							{/* </div> */}
 							<div className="section">
 								<Stories />
 							</div>
