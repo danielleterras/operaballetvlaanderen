@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-import "./styles.css";
 import "./style.css";
 
 class Cube extends Component {
@@ -12,8 +11,7 @@ class Cube extends Component {
 			z: 0,
 			zoom: 100,
 			opacity: 75,
-			perspective: 700,
-			zoomRange: [-1500, 0]
+			perspective: 700
 		};
 
 		this.onMouseMove = this.onMouseMove.bind(this);
@@ -53,7 +51,7 @@ class Cube extends Component {
 	}
 
 	render() {
-		var { x, y, z, zoom, zoomRange, opacity, perspective } = this.state,
+		var { x, y, z, zoom, opacity, perspective } = this.state,
 			cubeStyle = {
 				transform: `translateZ(${zoom}px) rotateX(${x}deg) rotateY(${y}deg) rotateZ(${z}deg)`
 			},
@@ -62,16 +60,14 @@ class Cube extends Component {
 
 		return (
 			<>
-				<div className="section">
-					<div className="wrapper">
-						<div className="container" style={containerStyle}>
-							<div className="cube animated" style={cubeStyle}>
-								{Array(6)
-									.fill()
-									.map(() => (
-										<figure style={surfaceStyle} />
-									))}
-							</div>
+				<div className="wrapper">
+					<div className="container" style={containerStyle}>
+						<div className="cube animated" style={cubeStyle}>
+							{Array(6)
+								.fill()
+								.map(() => (
+									<figure style={surfaceStyle} />
+								))}
 						</div>
 					</div>
 				</div>
