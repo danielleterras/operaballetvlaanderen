@@ -3,6 +3,7 @@ body {
   color: #fff;
 }
 
+
 .wrapper {
   display: flex;
   align-items: center;
@@ -34,18 +35,12 @@ body {
   display: block;
   opacity: 0.2;
   transition: opacity 300ms;
-  border: #222 solid 0.1rem;
+  border: #979797 solid 0.1rem;
   background: #fff;
   animation-name: color_change;
 	animation-duration: 5s;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
-  /* -webkit-box-shadow: 10px 10px 87px 30px rgba(108,235,218,0.3);
-  -moz-box-shadow: 10px 10px 87px 30px rgba(108,235,218,0.3);
-  box-shadow: 10px 10px 87px 30px rgba(108,235,218,0.3); */
-  /* -webkit-box-shadow: inset 10px 10px 87px 89px rgba(108,235,218,0.3);
-  -moz-box-shadow: inset 10px 10px 87px 89px rgba(108,235,218,0.3); */
-  /* box-shadow: inset 10px 10px 87px 89px ; */
 }
 
 .cube figure:nth-of-type(1) {
@@ -81,39 +76,38 @@ body {
 }
 
 @-webkit-keyframes color_change {
-  0% { box-shadow: inset 10px 10px 87px 89px blue; }
-  25% { box-shadow: inset 10px 10px 87px 89px orange; }
-  50% { box-shadow: inset 10px 10px 87px 89px yellow; }
+  0% { box-shadow: inset 10px 10px 87px 89px #F72442; }
+  25% { box-shadow: inset 10px 10px 87px 89px #50E3C2; }
+  50% { box-shadow: inset 10px 10px 87px 89px #7ED321; }
   75% { box-shadow: inset 10px 10px 87px 89px black; }
   100% { box-shadow: inset 10px 10px 87px 89px red; }
-	/* from { box-shadow: inset 10px 10px 87px 89px  blue; }
-	to { box-shadow: inset 10px 10px 87px 89px red; } */
+
 }
 @-moz-keyframes color_change {
-  0% { box-shadow: inset 10px 10px 87px 89px blue; }
-  25% { box-shadow: inset 10px 10px 87px 89px orange; }
-  50% { box-shadow: inset 10px 10px 87px 89px yellow; }
+  0% { box-shadow: inset 10px 10px 87px 89px #F72442; }
+  25% { box-shadow: inset 10px 10px 87px 89px #50E3C2; }
+  50% { box-shadow: inset 10px 10px 87px 89px #7ED321; }
   75% { box-shadow: inset 10px 10px 87px 89px black; }
   100% { box-shadow: inset 10px 10px 87px 89px red; }
 }
 @-ms-keyframes color_change {
-  0% { box-shadow: inset 10px 10px 87px 89px blue; }
-  25% { box-shadow: inset 10px 10px 87px 89px orange; }
-  50% { box-shadow: inset 10px 10px 87px 89px yellow; }
+  0% { box-shadow: inset 10px 10px 87px 89px #F72442; }
+  25% { box-shadow: inset 10px 10px 87px 89px #50E3C2; }
+  50% { box-shadow: inset 10px 10px 87px 89px #7ED321; }
   75% { box-shadow: inset 10px 10px 87px 89px black; }
   100% { box-shadow: inset 10px 10px 87px 89px red; }
 }
 @-o-keyframes color_change {
-  0% { box-shadow: inset 10px 10px 87px 89px blue; }
-  25% { box-shadow: inset 10px 10px 87px 89px orange; }
-  50% { box-shadow: inset 10px 10px 87px 89px yellow; }
+  0% { box-shadow: inset 10px 10px 87px 89px #F72442; }
+  25% { box-shadow: inset 10px 10px 87px 89px #50E3C2; }
+  50% { box-shadow: inset 10px 10px 87px 89px #7ED321; }
   75% { box-shadow: inset 10px 10px 87px 89px black; }
   100% { box-shadow: inset 10px 10px 87px 89px red; }
 }
 @keyframes color_change {
-  0% { box-shadow: inset 10px 10px 87px 89px blue; }
-  25% { box-shadow: inset 10px 10px 87px 89px orange; }
-  50% { box-shadow: inset 10px 10px 87px 89px yellow; }
+  0% { box-shadow: inset 10px 10px 87px 89px #F72442; }
+  25% { box-shadow: inset 10px 10px 87px 89px #50E3C2; }
+  50% { box-shadow: inset 10px 10px 87px 89px #7ED321; }
   75% { box-shadow: inset 10px 10px 87px 89px black; }
   100% { box-shadow: inset 10px 10px 87px 89px red; }
 }

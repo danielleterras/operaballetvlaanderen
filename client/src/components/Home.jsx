@@ -1,6 +1,5 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React, { Component } from "react";
-import "fullpage.js/vendors/scrolloverflow"; // Optional. When using scrollOverflow:true
+import "fullpage.js/vendors/scrolloverflow";
 import ReactFullpage from "@fullpage/react-fullpage";
 
 import Stories from "./Stories";
@@ -39,25 +38,96 @@ class FullpageWrapper extends Component {
 								<button>Read all stories</button>
 							</div>
 							<div className="section">
-								<h1>introduction</h1>
+								<div className="testing">
+									<Cube />
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+										molestiae corporis libero quisquam ut amet quia ea
+										laudantium saepe minus unde ipsum culpa temporibus et quam
+										numquam quo, nobis fuga.
+									</p>
+								</div>
 							</div>
 							<div className="section">
-								<h1>Title?</h1>
+								<Cube />
+								<div>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+										do eiusmod
+									</p>
+									<h1>Wat is de titel van je verhaal?</h1>
+									<input type="text" placeholder="Typ hier je antwoord" />
+								</div>
 							</div>
 							<div className="section">
-								<h1>Name?</h1>
+								<Cube />
+								<div>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+										do eiusmod
+									</p>
+									<h1>Wat is jou naam?</h1>
+									<input type="text" placeholder="Typ hier je antwoord" />
+								</div>
 							</div>
 							<div className="section">
+								<Cube />
+								<div>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+										do eiusmod
+									</p>
+									<h1>Wie zou je willen zijn?</h1>
+									<input type="text" placeholder="Typ hier je antwoord" />
+								</div>
 								<h1>Wie wil je zijn?</h1>
 							</div>
 							<div className="section">
-								<h1>Welke stijl?</h1>
+								<Cube />
+								<div>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+										do eiusmod
+									</p>
+									<h1>Welke stijl verkies je?</h1>
+									<input type="text" placeholder="Typ hier je antwoord" />
+								</div>
 							</div>
 							<div className="section">
-								<h1>Vertel anekdote</h1>
+								<Cube />
+								<div>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+										do eiusmod
+									</p>
+									<h1>Vertel een leuke anekdote over jezelf.</h1>
+									<input type="text" placeholder="Typ hier je antwoord" />
+								</div>
 							</div>
 							<div className="section">
-								<h1>here's your story</h1>
+								<Cube />
+								<div>
+									<h3>Genoeg vragen.</h3>
+									<h2>Dit is jouw verhaal</h2>
+									<p>Titel</p>
+									<p>
+										Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+										Dignissimos sequi nam esse fuga cumque, aliquam odit
+										voluptatem, eaque rem vitae magni sit sunt ullam praesentium
+										quasi, vel tenetur doloribus facere?
+									</p>
+									<p>
+										En dat is hoe het verhaal van <b>[naam]</b> begint…
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+										ducimus officia eveniet, maxime architecto iure doloribus
+										sequi optio omnis, dicta autem dignissimos quaerat
+										distinctio nostrum ratione itaque rerum. Consequatur,
+										dolore.
+									</p>
+									<button>submit</button>
+								</div>
 							</div>
 							<div className="section">
 								<Stories />
