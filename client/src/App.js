@@ -7,7 +7,6 @@ import { ROUTES } from "./constants/";
 
 import Navigation from "./components/index.js";
 import Stories from "./components/Stories";
-import Performances from "./components/Performances";
 import Home from "./components/Home";
 
 import About from "./containers/About";
@@ -18,7 +17,6 @@ const App = () => {
 			{/* <Navigation /> */}
 			<Switch>
 				<Route path={ROUTES.stories} component={Stories} />
-				<Route path={ROUTES.performances} component={Performances} />
 				<Route path={ROUTES.about} component={About} />
 				<Route path={ROUTES.landing} exact strict component={Home} />
 			</Switch>

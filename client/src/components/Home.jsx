@@ -5,7 +5,6 @@ import ReactFullpage from "@fullpage/react-fullpage";
 
 import Stories from "./Stories";
 import Cube from "./Cube";
-import Performances from "./Performances";
 
 import "./styles.css";
 

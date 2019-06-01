@@ -62,7 +62,7 @@ class Cube extends Component {
 			<>
 				<div className="wrapper">
 					<div className="container" style={containerStyle}>
-						<div className="cube animated" style={cubeStyle}>
+						<div className="cube" style={cubeStyle}>
 							{Array(6)
 								.fill()
 								.map(() => (
