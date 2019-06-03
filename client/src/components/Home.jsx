@@ -5,7 +5,8 @@ import ReactFullpage from "@fullpage/react-fullpage";
 import Stories from "./Stories";
 import Cube from "./Cube";
 
-import "./home.module.css";
+import styles from "./home.module.css";
+import mouse from "./../assets/scroll_icon.svg";
 class FullpageWrapper extends Component {
   render() {
     return (
@@ -28,7 +29,17 @@ class FullpageWrapper extends Component {
           return (
             <div>
               <div className="section">
+                <h1>CUBO</h1>
+                <p>
+                  <span className={styles.language}>NL</span>
+                  <span>|</span>
+                  <span>EN</span>
+                </p>
                 <Cube />
+                <div className={styles.scroll}>
+                  <img src={mouse} alt="mouse" width="44" height="44" />
+                  <p>Scroll down to discover</p>
+                </div>
               </div>
               <div className="section">
                 <h1>Meet the cube</h1>
