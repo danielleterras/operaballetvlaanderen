@@ -36,7 +36,7 @@ class FullpageWrapper extends Component {
 									<span>|</span>
 									<span>EN</span>
 								</p>
-								{/* <Cube /> */}
+								<Cube />
 								<div className={styles.scroll}>
 									<img src={mouse} alt="mouse" width="44" height="44" />
 									<p>Scroll down to discover</p>
@@ -46,13 +46,13 @@ class FullpageWrapper extends Component {
 								<h1>
 									ontdek <b>cubo</b>
 								</h1>
-								{/* <Cube /> */}
+								<Cube />
 								<p>Experience in a new way</p>
 								<button className={styles.button}>Read all stories</button>
 							</div>
 							<div className="section">
 								<div className="testing">
-									{/* <Cube /> */}
+									<Cube />
 									<p>
 										Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
 										molestiae corporis libero quisquam ut amet quia ea
@@ -66,7 +66,7 @@ class FullpageWrapper extends Component {
 								</div>
 							</div>
 							<div className="section">
-								{/* <Cube /> */}
+								<Cube />
 								<div>
 									<p>
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -81,7 +81,7 @@ class FullpageWrapper extends Component {
 								</div>
 							</div>
 							<div className="section">
-								{/* <Cube /> */}
+								<Cube />
 								<div>
 									<p>
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -96,7 +96,7 @@ class FullpageWrapper extends Component {
 								</div>
 							</div>
 							<div className="section">
-								{/* <Cube /> */}
+								<Cube />
 								<div>
 									<p>
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -111,7 +111,7 @@ class FullpageWrapper extends Component {
 								</div>
 							</div>
 							<div className="section">
-								{/* <Cube /> */}
+								<Cube />
 								<div>
 									<p>
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -126,7 +126,7 @@ class FullpageWrapper extends Component {
 								</div>
 							</div>
 							<div className="section">
-								{/* <Cube /> */}
+								<Cube />
 								<div>
 									<p>
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
