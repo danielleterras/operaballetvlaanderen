@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import "./cube.module.css";
+import styles from "./cube.module.css";
 class Cube extends Component {
   constructor() {
     super();
@@ -59,9 +59,9 @@ class Cube extends Component {
 
     return (
       <>
-        <div className="wrapper">
-          <div className="container" style={containerStyle}>
-            <div className="cube" style={cubeStyle}>
+        <div className={styles.wrapper}>
+          <div className={styles.container} style={containerStyle}>
+            <div className={styles.cube} style={cubeStyle}>
               {Array(6)
                 .fill()
                 .map(() => (
