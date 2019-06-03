@@ -26,6 +26,14 @@ body {
   transition-duration: 100ms;
 }
 
+#cube::before{
+  display: block;
+  content: url("data:image/svg+xml;charset=UTF-8, <svg height="1000" width="1000"><circle cx="300" cy="300" r="300"  stroke="white" stroke-width="1" fill="#120107"/></svg>");
+  background-size: 28px 28px;
+  height: 28px;
+  width: 28px;
+}
+
 .cube figure {
   position: absolute;
   margin: 0;
@@ -75,113 +83,39 @@ body {
 }
 
 @-webkit-keyframes color_change {
-  0% { background-image:radial-gradient(
-    yellow,
-    #ffffff
-  ); }
-  25% { background-image:radial-gradient(
-    blue,
-    #ffffff
-  ); }
-  50% { background-image:radial-gradient(
-    red,
-    #ffffff
-  );}
-  75% { background-image:radial-gradient(
-    green,
-    #ffffff
-  ); }
-  100% { background-image:radial-gradient(
-    purple,
-    #ffffff
-  ); }
-
+  0% { box-shadow: inset 10px 10px 87px 89px blue; }
+  25% { box-shadow: inset 10px 10px 87px 89px orange; }
+  50% { box-shadow: inset 10px 10px 87px 89px yellow; }
+  75% { box-shadow: inset 10px 10px 87px 89px black; }
+  100% { box-shadow: inset 10px 10px 87px 89px red; }
+  /* from { box-shadow: inset 10px 10px 87px 89px  blue; }
+  to { box-shadow: inset 10px 10px 87px 89px red; } */
 }
 @-moz-keyframes color_change {
-  0% { background-image:radial-gradient(
-    yellow,
-    #ffffff
-  ); }
-  25% { background-image:radial-gradient(
-    blue,
-    #ffffff
-  ); }
-  50% { background-image:radial-gradient(
-    red,
-    #ffffff
-  );}
-  75% { background-image:radial-gradient(
-    green,
-    #ffffff
-  ); }
-  100% { background-image:radial-gradient(
-    purple,
-    #ffffff
-  );}
+  0% { box-shadow: inset 10px 10px 87px 89px blue; }
+  25% { box-shadow: inset 10px 10px 87px 89px orange; }
+  50% { box-shadow: inset 10px 10px 87px 89px yellow; }
+  75% { box-shadow: inset 10px 10px 87px 89px black; }
+  100% { box-shadow: inset 10px 10px 87px 89px red; }
 }
 @-ms-keyframes color_change {
-  0% { background-image:radial-gradient(
-    yellow,
-    #ffffff
-  ); }
-  25% { background-image:radial-gradient(
-    blue,
-    #ffffff
-  ); }
-  50% { background-image:radial-gradient(
-    red,
-    #ffffff
-  );}
-  75% { background-image:radial-gradient(
-    green,
-    #ffffff
-  ); }
-  100% { background-image:radial-gradient(
-    purple,
-    #ffffff
-  );}
+  0% { box-shadow: inset 10px 10px 87px 89px blue; }
+  25% { box-shadow: inset 10px 10px 87px 89px orange; }
+  50% { box-shadow: inset 10px 10px 87px 89px yellow; }
+  75% { box-shadow: inset 10px 10px 87px 89px black; }
+  100% { box-shadow: inset 10px 10px 87px 89px red; }
 }
 @-o-keyframes color_change {
-  0% { background-image:radial-gradient(
-    yellow,
-    #ffffff
-  ); }
-  25% { background-image:radial-gradient(
-    blue,
-    #ffffff
-  ); }
-  50% { background-image:radial-gradient(
-    red,
-    #ffffff
-  );}
-  75% { background-image:radial-gradient(
-    green,
-    #ffffff
-  ); }
-  100% { background-image:radial-gradient(
-    purple,
-    #ffffff
-  );}
+  0% { box-shadow: inset 10px 10px 87px 89px blue; }
+  25% { box-shadow: inset 10px 10px 87px 89px orange; }
+  50% { box-shadow: inset 10px 10px 87px 89px yellow; }
+  75% { box-shadow: inset 10px 10px 87px 89px black; }
+  100% { box-shadow: inset 10px 10px 87px 89px red; }
 }
 @keyframes color_change {
-  0% { background-image:radial-gradient(
-    yellow,
-    #ffffff
-  ); }
-  25% { background-image:radial-gradient(
-    blue,
-    #ffffff
-  ); }
-  50% { background-image:radial-gradient(
-    red,
-    #ffffff
-  );}
-  75% { background-image:radial-gradient(
-    green,
-    #ffffff
-  ); }
-  100% { background-image:radial-gradient(
-    purple,
-    #ffffff
-  );}
+  0% { box-shadow: inset 10px 10px 87px 89px blue; }
+  25% { box-shadow: inset 10px 10px 87px 89px orange; }
+  50% { box-shadow: inset 10px 10px 87px 89px yellow; }
+  75% { box-shadow: inset 10px 10px 87px 89px black; }
+  100% { box-shadow: inset 10px 10px 87px 89px red; }
 }

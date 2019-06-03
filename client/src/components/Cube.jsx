@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import styles from "./cube.module.css";
+import { relative } from "path";
 class Cube extends Component {
   constructor() {
     super();
