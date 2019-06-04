@@ -30,7 +30,7 @@ class FullpageWrapper extends Component {
           return (
             <div>
               <div className="section">
-                <h1>CUBO</h1>
+                <h1>Cubo</h1>
                 {/*<Cube />*/}
                 <div className={styles.scroll}>
                   <img src={mouse} alt="mouse" width="44" height="44" />
@@ -67,7 +67,7 @@ class FullpageWrapper extends Component {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod
                   </p>
-                  <h1>Wat is de titel van je verhaal?</h1>
+                  <h2>Wat is de titel van je verhaal?</h2>
                   <input
                     type="text"
                     placeholder="Typ hier je antwoord"
@@ -82,7 +82,7 @@ class FullpageWrapper extends Component {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod
                   </p>
-                  <h1>Wat is jou naam?</h1>
+                  <h2>Wat is jou naam?</h2>
                   <input
                     type="text"
                     placeholder="Typ hier je antwoord"
@@ -97,7 +97,7 @@ class FullpageWrapper extends Component {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod
                   </p>
-                  <h1>Wie zou je willen zijn?</h1>
+                  <h2>Wie zou je willen zijn?</h2>
                   <input
                     type="text"
                     placeholder="Typ hier je antwoord"
@@ -112,7 +112,7 @@ class FullpageWrapper extends Component {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod
                   </p>
-                  <h1>Welke stijl verkies je?</h1>
+                  <h2>Welke stijl verkies je?</h2>
                   <input
                     type="text"
                     placeholder="Typ hier je antwoord"
@@ -127,11 +127,10 @@ class FullpageWrapper extends Component {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod
                   </p>
-                  <h1>Vertel een leuke anekdote over jezelf.</h1>
-                  <input
-                    type="text"
+                  <h2>Vertel een leuke anekdote over jezelf.</h2>
+                  <textarea
                     placeholder="Typ hier je antwoord"
-                    className={styles.inputField}
+                    className={styles.textField}
                   />
                 </div>
               </div>
