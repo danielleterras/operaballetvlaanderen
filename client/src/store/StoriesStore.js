@@ -28,6 +28,13 @@ class StoriesStore {
     story.updateFromServer(values);
     runInAction(() => this.stories.push(story));
   };
+
+  vote = story => {
+    console.log(story.id);
+    const vote = this.stories.find(check => check.story.id === story.id);
+    console.log(vote);
+    //vote.increment();
+  };
 }
 
 decorate(StoriesStore, {

@@ -10,7 +10,7 @@ class Story {
     title,
     synopsys,
     story,
-    votes = 0
+    votes
   ) {
     this.id = id;
     this.type = type;
@@ -20,7 +20,7 @@ class Story {
     this.title = title;
     this.synopsys = synopsys;
     this.story = story;
-    this.votes = votes;
+    this.votes = 0;
   }
 
   setId = id => (this.id = id);
@@ -32,8 +32,17 @@ class Story {
   setStory = value => (this.story = value);
   setVotes = value => (this.votes = value);
 
+  increment = () => {
+    this.votes++;
+  };
+
+  decrement = () => {
+    this.votes--;
+  };
+
   get values() {
     return {
+      id: this.id,
       type: this.type,
       genre: this.genre,
       author: this.author,
@@ -43,11 +52,6 @@ class Story {
       votes: this.votes
     };
   }
-
-  vote = () => {
-    this.votes++;
-    console.log(this.votes);
-  };
 
   updateFromServer = values => {
     this.setId(values._id);
@@ -79,7 +83,8 @@ decorate(Story, {
   setStory: action,
   votes: observable,
   setVotes: action,
-  vote: action
+  increment: action,
+  decrement: action
 });
 
 export default Story;

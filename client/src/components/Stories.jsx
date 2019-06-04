@@ -3,7 +3,7 @@ import { inject, observer, PropTypes } from "mobx-react";
 import outline_heart from "./../assets/stroke_heart.svg";
 
 const Stories = ({ storiesStore }) => {
-  const { stories } = storiesStore;
+  const { stories, vote } = storiesStore;
   console.log(stories);
 
   const typeInput = React.createRef();
@@ -47,10 +47,10 @@ const Stories = ({ storiesStore }) => {
             <span>{story.type}</span> - <span>{story.genre}</span> -{" "}
             <span>{story.author}</span>
             <p>{story.synopsys}</p>
-            <p>
+            <button onClick={() => vote(story)}>
               <img src={outline_heart} alt="heart" width="20" height="20" />
               {story.votes}
-            </p>
+            </button>
           </article>
         ))}
       </ul>
