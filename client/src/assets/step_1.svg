@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="627px" height="618px" viewBox="0 0 627 618" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-407.000000, -108.000000)" stroke="#FFFFFF">
+            <g id="Group-2" transform="translate(406.000000, 108.000000)">
+                <rect id="Rectangle" fill="#FFFFFF" x="304.5" y="0.5" width="19" height="19"></rect>
+                <circle id="Oval" cx="314.5" cy="313.5" r="303.5"></circle>
+                <rect id="Rectangle" fill="#000000" transform="translate(561.000000, 138.000000) rotate(10.000000) translate(-561.000000, -138.000000) " x="551.5" y="128.5" width="19" height="19"></rect>
+                <rect id="Rectangle-Copy" fill="#000000" transform="translate(614.000000, 358.353137) rotate(53.000000) translate(-614.000000, -358.353137) " x="604.5" y="348.853137" width="19" height="19"></rect>
+                <rect id="Rectangle" fill="#000000" transform="translate(485.000000, 565.000000) rotate(9.000000) translate(-485.000000, -565.000000) " x="475.5" y="555.5" width="19" height="19"></rect>
+                <rect id="Rectangle" fill="#000000" transform="translate(67.000000, 138.000000) scale(-1, 1) rotate(9.000000) translate(-67.000000, -138.000000) " x="57.5" y="128.5" width="19" height="19"></rect>
+                <rect id="Rectangle-Copy-2" fill="#000000" transform="translate(15.000000, 358.492054) scale(-1, 1) rotate(53.000000) translate(-15.000000, -358.492054) " x="5.5" y="348.992054" width="19" height="19"></rect>
+                <rect id="Rectangle" fill="#000000" transform="translate(145.000000, 565.000000) scale(-1, 1) rotate(9.000000) translate(-145.000000, -565.000000) " x="135.5" y="555.5" width="19" height="19"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

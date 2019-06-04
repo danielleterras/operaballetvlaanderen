@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="252px" height="271px" viewBox="0 0 252 271" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-76.1%" y="-53.5%" width="252.2%" height="207.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="21" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-104.1%" y="-49.0%" width="308.2%" height="198.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="21" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-44.5%" y="-102.5%" width="188.9%" height="305.0%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="21" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3" transform="translate(11.000000, 1.000000)" stroke="#979797">
+            <g id="Group" transform="translate(43.000000, 67.000000)" fill="#F72442" opacity="0.579357329">
+                <polygon id="Path-3" filter="url(#filter-1)" points="83.4521933 155.774566 83.4521933 61.9942197 0 36.7456647 0 130.976879"></polygon>
+                <polygon id="Path-4" filter="url(#filter-2)" points="144.453932 25.4739884 83.4521933 61.9942197 83.4521933 155.774566 144.453932 119.705202"></polygon>
+                <polygon id="Path-5" filter="url(#filter-3)" points="0 36.7456647 60.7749668 0 144.453932 25.4739884 83.4521933 61.9942197"></polygon>
+            </g>
+            <g id="Group" opacity="0.5" fill="#F4F4F4">
+                <polygon id="Path-3" points="133.241379 249.638728 133.241379 99.349711 0 58.8872832 0 209.898844"></polygon>
+                <polygon id="Path-4" points="230.637931 40.8236994 133.241379 99.349711 133.241379 249.638728 230.637931 191.83526"></polygon>
+                <polygon id="Path-5" points="0 58.8872832 97.0344828 0 230.637931 40.8236994 133.241379 99.349711"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

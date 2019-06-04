@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="257px" height="253px" viewBox="0 0 257 253" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>Group 6</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-135.8%" y="-95.4%" width="371.7%" height="290.7%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="21" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-185.8%" y="-87.4%" width="471.7%" height="274.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="21" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-79.4%" y="-182.7%" width="258.7%" height="465.5%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="21" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-140.000000, -155.000000)">
+            <g id="Group-6" transform="translate(140.000000, 155.000000)">
+                <circle id="Oval" stroke="#FFFFFF" cx="128" cy="128" r="124"></circle>
+                <rect id="Rectangle" stroke="#FFFFFF" fill="#000000" transform="translate(228.500000, 56.500000) rotate(10.000000) translate(-228.500000, -56.500000) " x="224.5" y="52.5" width="8" height="8"></rect>
+                <rect id="Rectangle-Copy" stroke="#FFFFFF" fill="#000000" transform="translate(250.500000, 146.000000) rotate(53.000000) translate(-250.500000, -146.000000) " x="246.5" y="142.5" width="8" height="7"></rect>
+                <rect id="Rectangle" stroke="#FFFFFF" fill="#000000" transform="translate(198.000000, 230.500000) rotate(9.000000) translate(-198.000000, -230.500000) " x="194.5" y="226.5" width="7" height="8"></rect>
+                <rect id="Rectangle" stroke="#FFFFFF" fill="#FFFFFF" transform="translate(27.000000, 56.500000) scale(-1, 1) rotate(9.000000) translate(-27.000000, -56.500000) " x="23.5" y="52.5" width="7" height="8"></rect>
+                <rect id="Rectangle-Copy-2" stroke="#FFFFFF" fill="#000000" transform="translate(6.000000, 146.000000) scale(-1, 1) rotate(53.000000) translate(-6.000000, -146.000000) " x="2.5" y="142.5" width="7" height="7"></rect>
+                <rect id="Rectangle" stroke="#FFFFFF" fill="#000000" transform="translate(59.000000, 230.500000) scale(-1, 1) rotate(9.000000) translate(-59.000000, -230.500000) " x="55.5" y="226.5" width="7" height="8"></rect>
+                <rect id="Rectangle" stroke="#FFFFFF" fill="#000000" x="124.5" y="0.5" width="7" height="7"></rect>
+                <g id="Group-3" transform="translate(126.577031, 126.579028) rotate(-40.000000) translate(-126.577031, -126.579028) translate(61.961646, 56.579028)" stroke="#979797">
+                    <g id="Group" transform="translate(24.230769, 37.243590)" fill="#F72442" opacity="0.579357329">
+                        <polygon id="Path-3" filter="url(#filter-1)" points="46.7435583 87.3735549 46.7435583 34.7723988 0 20.6105491 0 73.4645954"></polygon>
+                        <polygon id="Path-4" filter="url(#filter-2)" points="80.9120833 14.2882948 46.7435583 34.7723988 46.7435583 87.3735549 80.9120833 67.142341"></polygon>
+                        <polygon id="Path-5" filter="url(#filter-3)" points="0 20.6105491 34.0415044 0 80.9120833 14.2882948 46.7435583 34.7723988"></polygon>
+                    </g>
+                    <g id="Group" opacity="0.5" fill="#F4F4F4">
+                        <polygon id="Path-3" points="74.5406318 139.797688 74.5406318 55.6358382 0 32.9768786 0 117.543353"></polygon>
+                        <polygon id="Path-4" points="129.028213 22.8612717 74.5406318 55.6358382 74.5406318 139.797688 129.028213 107.427746"></polygon>
+                        <polygon id="Path-5" points="0 32.9768786 54.2850253 0 129.028213 22.8612717 74.5406318 55.6358382"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
