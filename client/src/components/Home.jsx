@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import "fullpage.js/vendors/scrolloverflow";
 import ReactFullpage from "@fullpage/react-fullpage";
+import { Link } from "react-router-dom";
+import { ROUTES } from "../constants";
 
-import Stories from "./Stories";
 import Cube from "./Cube";
 
 import "./styles.css";
@@ -94,9 +95,9 @@ class FullpageWrapper extends Component {
                     <img src={cube2} alt="cube2" width="650px" height="350px" />
                   </div>
                   <div style={{ width: "600px", marginLeft: "-10rem" }}>
-                    <button aria-label="Ontdek" className={styles.sub}>
+                    <Link to={ROUTES.stories} className={styles.sub}>
                       Ontdek alle verhalen
-                    </button>
+                    </Link>
                     <h2>
                       Wil jij opera en ballet op een unieke manier te ervaren?
                     </h2>
@@ -318,14 +319,10 @@ class FullpageWrapper extends Component {
                     dolore.
                   </p>
                   <button className={styles.button}>Deel je verhaal</button>
-                  <button className={styles.sub}>Ontdek alle verhalen</button>
+                  <Link to={ROUTES.stories} className={styles.sub}>
+                    Ontdek alle verhalen
+                  </Link>
                 </div>
-              </div>
-              <div className="section">
-                <Stories />
-              </div>
-              <div className="section">
-                <h3>What is your story?</h3>
               </div>
             </div>
           );

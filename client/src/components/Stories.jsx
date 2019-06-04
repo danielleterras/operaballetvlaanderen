@@ -1,6 +1,7 @@
 import React from "react";
 import { inject, observer, PropTypes } from "mobx-react";
 import outline_heart from "./../assets/stroke_heart.svg";
+import styles from "./stories.module.css";
 
 const Stories = ({ storiesStore }) => {
   const { stories, vote } = storiesStore;
@@ -37,20 +38,24 @@ const Stories = ({ storiesStore }) => {
     storyInput.current.value = "";
   };
   return (
-    <>
-      <h1>Stories</h1>
-      <ul>
+    <div>
+      <ul className={styles.container}>
         {stories.map(story => (
           <article key={story.id}>
-            <h2>{story.title}</h2>
-            <span>{story.type}</span> - <span>{story.genre}</span> -{" "}
-            <span>{story.author}</span>
-            <p>{story.synopsys}</p>
+            <div className={styles.header}>
+              <h2>{story.title}</h2>
+              <span className={styles.votes}>
+                <button onClick={() => vote(story)} className={styles.heart}>
+                  <img src={outline_heart} alt="heart" width="20" height="20" />
+                </button>{" "}
+                {story.votes}
+              </span>
+            </div>
+            <div className={styles.template}>
+              <p>Door {story.author}</p>
+              <p>{story.synopsys}</p>
+            </div>
             {/*onClick={e => story.setVotes(e.target.value)}*/}
-            <button onClick={() => vote(story)}>
-              <img src={outline_heart} alt="heart" width="20" height="20" />
-              {story.votes}
-            </button>
           </article>
         ))}
       </ul>
@@ -92,7 +97,7 @@ const Stories = ({ storiesStore }) => {
         </label>
         <input type="submit" value="add" />
       </form>
-    </>
+    </div>
   );
 };
 

@@ -1,0 +1,37 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 960px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.template {
+    background-color: #1A1A1A;
+    margin-top: -1rem;
+    padding: 1rem;
+}
+
+.heart {
+    border: none;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    margin-right: .5rem
+}
+
+.votes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 16px;
+}
