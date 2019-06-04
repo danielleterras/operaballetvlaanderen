@@ -31,13 +31,11 @@ class Story {
   setSynopsys = value => (this.synopsys = value);
   setStory = value => (this.story = value);
   setVotes = value => (this.votes = value);
+  //setVotes = () => (this.votes = this.votes + 1);
 
   increment = () => {
-    this.votes++;
-  };
-
-  decrement = () => {
-    this.votes--;
+    this.votes = this.votes + 1;
+    console.log(this.votes);
   };
 
   get values() {

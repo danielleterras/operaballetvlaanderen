@@ -4,7 +4,6 @@ import outline_heart from "./../assets/stroke_heart.svg";
 
 const Stories = ({ storiesStore }) => {
   const { stories, vote } = storiesStore;
-  console.log(stories);
 
   const typeInput = React.createRef();
   const genreInput = React.createRef();
@@ -47,6 +46,7 @@ const Stories = ({ storiesStore }) => {
             <span>{story.type}</span> - <span>{story.genre}</span> -{" "}
             <span>{story.author}</span>
             <p>{story.synopsys}</p>
+            {/*onClick={e => story.setVotes(e.target.value)}*/}
             <button onClick={() => vote(story)}>
               <img src={outline_heart} alt="heart" width="20" height="20" />
               {story.votes}
