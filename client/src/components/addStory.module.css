@@ -1,0 +1,128 @@
+h1 {
+    font-weight: normal;
+    font-size: 2.25rem;
+    text-transform: uppercase;
+  }
+  h2 {
+    font-weight: bold;
+    font-size: 2.25rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+  }
+  
+  p {
+    font-size: 16px;
+  }
+  
+  .language {
+    font-weight: bold;
+  }
+  
+  .scroll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .sub {
+    color: #F72442;
+    font-weight: bold;
+    background: none;
+    border:none;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  
+  .button {
+    font-size: 16px;
+    font-weight: bold;
+  
+    color: white;
+    background-color: #F72442;
+  
+    margin-right: 1rem;
+    margin-top: 1.5rem;
+    padding: .5rem 1rem;
+  
+    border: none;
+    text-decoration: none;
+  }
+  
+  .submit {
+    color: white;
+    font-weight: bold;
+    background-color: #F72442;
+    border: none;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+  }
+  
+  .submit:hover {
+    color: #F72442;
+    background-color: white;
+    transition: 0.5s;
+  }
+  
+  .inputField {
+    font-size: 1rem;
+    border: none;
+    border-bottom: #F72442 0.2rem solid;
+    background: none;
+    color: #fff
+  }
+  
+  .inputField::placeholder {
+    color: #F72442;
+  }
+  
+  .textField {
+    font-size: 1rem;
+    border: none;
+    background: #1A1A1A;;
+    color: white;
+    width: 730px;
+    height: 270px;
+  }
+  
+  .textField::placeholder {
+    color: white;
+  }
+  
+  .cube1{
+    background-image: url("../assets/step_1.svg");  
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .cube2{
+    background-image: url("../assets/step_2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .cube3{
+    background-image: url("../assets/step_3.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .cube4{
+    background-image: url("../assets/step_4.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .cube5{
+    background-image: url("../assets/step_5.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .cube6{
+    background-image: url("../assets/step_6.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
