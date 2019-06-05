@@ -30,6 +30,7 @@ const Stories = ({ storiesStore }) => {
             <div className={styles.template}>
               <p>Door {story.author}</p>
               <p>{story.synopsys}</p>
+              <p>{story.story}</p>
             </div>
             {/*onClick={e => story.setVotes(e.target.value)}*/}
           </article>

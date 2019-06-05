@@ -6,7 +6,6 @@ exports.create = (req, res) => {
   }
   const story = new Story({
     title: req.body.title,
-    type: req.body.type,
     genre: req.body.genre,
     author: req.body.author,
     synopsys: req.body.synopsys,

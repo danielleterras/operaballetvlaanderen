@@ -2,18 +2,8 @@ import uuid from "uuid";
 import { decorate, observable, action, computed } from "mobx";
 
 class Story {
-  constructor(
-    id = uuid.v4(),
-    type,
-    genre,
-    author,
-    title,
-    synopsys,
-    story,
-    votes
-  ) {
+  constructor(id = uuid.v4(), genre, author, title, synopsys, story, votes) {
     this.id = id;
-    this.type = type;
     this.genre = genre;
     this.author = author;
 
@@ -24,7 +14,6 @@ class Story {
   }
 
   setId = id => (this.id = id);
-  setType = value => (this.type = value);
   setGenre = value => (this.genre = value);
   setAuthor = value => (this.author = value);
   setTitle = value => (this.title = value);
@@ -41,7 +30,6 @@ class Story {
   get values() {
     return {
       id: this.id,
-      type: this.type,
       genre: this.genre,
       author: this.author,
       title: this.title,
@@ -53,7 +41,6 @@ class Story {
 
   updateFromServer = values => {
     this.setId(values._id);
-    this.setType(values.type);
     this.setGenre(values.genre);
     this.setAuthor(values.author);
     this.setTitle(values.title);
@@ -67,8 +54,6 @@ decorate(Story, {
   id: observable,
   setId: action,
   values: computed,
-  type: observable,
-  setType: action,
   genre: observable,
   setGenre: action,
   author: observable,

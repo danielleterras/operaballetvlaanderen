@@ -23,7 +23,6 @@ class StoriesStore {
   };
 
   _addStory = values => {
-    console.log("test  api");
     const story = new Story();
     story.updateFromServer(values);
     runInAction(() => this.stories.push(story));
