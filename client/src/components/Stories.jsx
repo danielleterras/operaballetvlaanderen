@@ -11,10 +11,12 @@ const Stories = ({ storiesStore }) => {
 
   return (
     <div className={styles.container}>
-      <Link to={ROUTES.landing}>Go back</Link>
-      <Link to={ROUTES.addStory} className={styles.sub}>
-        Schijf je eigen verhaal
-      </Link>
+      <div className={styles.navigation}>
+        <Link to={ROUTES.landing} className={styles.back} />
+        <Link to={ROUTES.addStory} className={styles.sub}>
+          Schijf je eigen verhaal
+        </Link>
+      </div>
       <ul className={styles.ul}>
         {stories.map(story => (
           <article key={story.id}>
@@ -30,7 +32,6 @@ const Stories = ({ storiesStore }) => {
             <div className={styles.template}>
               <p>Door {story.author}</p>
               <p>{story.synopsys}</p>
-              <p>{story.story}</p>
             </div>
             {/*onClick={e => story.setVotes(e.target.value)}*/}
           </article>
