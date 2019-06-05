@@ -10,7 +10,7 @@ import "./styles.css";
 import styles from "./home.module.css";
 import mouse from "./../assets/scroll_icon.svg";
 import cube1 from "./../assets/cube_1.svg";
-import cube2 from "./../assets/cube_2.svg";
+import cube2 from "./../assets/Cube_1.gif";
 import cube3 from "./../assets/cube_3.svg";
 import cube4 from "./../assets/cube_4.svg";
 import cube5 from "./../assets/cube_5.svg";
@@ -88,11 +88,12 @@ class FullpageWrapper extends Component {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
-                      height: "650px"
+                      height: "650px",
+                      width: "650px"
                     }}
                   >
                     {/*<Cube />*/}
-                    <img src={cube2} alt="cube2" width="650px" height="350px" />
+                    <img src={cube2} alt="cube2" width="350px" height="350px" />
                   </div>
                   <div style={{ width: "600px", marginLeft: "-10rem" }}>
                     <Link to={ROUTES.stories} className={styles.sub}>

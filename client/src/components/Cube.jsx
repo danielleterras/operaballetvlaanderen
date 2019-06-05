@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 import styles from "./cube.module.css";
-import { relative } from "path";
 class Cube extends Component {
   constructor() {
     super();
@@ -9,7 +8,7 @@ class Cube extends Component {
       x: -30,
       y: 30,
       z: 0,
-      zoom: 100,
+      zoom: 1,
       opacity: 75,
       perspective: 700
     };
@@ -56,7 +55,7 @@ class Cube extends Component {
         transform: `translateZ(${zoom}px) rotateX(${x}deg) rotateY(${y}deg) rotateZ(${z}deg)`
       },
       containerStyle = { perspective: `${perspective}px` },
-      surfaceStyle = { opacity: opacity / 100 };
+      surfaceStyle = { opacity: opacity / 150 };
 
     return (
       <>

@@ -5,14 +5,16 @@ import { Switch, Route, withRouter } from "react-router-dom";
 
 import { ROUTES } from "./constants/";
 
-import Stories from "./components/Stories";
 import Home from "./components/Home";
+import Stories from "./components/Stories";
+import AddStory from "./components/AddStory";
 
 const App = () => {
   return (
     <>
       <Switch>
         <Route path={ROUTES.stories} component={Stories} />
+        <Route path={ROUTES.addStory} component={AddStory} />
         <Route path={ROUTES.landing} exact strict component={Home} />
       </Switch>
     </>

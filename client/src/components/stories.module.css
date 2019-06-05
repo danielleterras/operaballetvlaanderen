@@ -4,8 +4,23 @@ body {
     justify-content: center;
 }
 
+ul {
+    padding: 0;
+    text-align: left;
+}
+
 .container {
     width: 960px;
+    text-align: right;
+}
+
+.sub {
+    color: #F72442;
+    font-weight: bold;
+    background: none;
+    border:none;
+    font-size: 16px;
+    text-decoration: none;
 }
 
 .header {
