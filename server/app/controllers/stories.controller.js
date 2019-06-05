@@ -10,6 +10,7 @@ exports.create = (req, res) => {
     genre: req.body.genre,
     author: req.body.author,
     synopsys: req.body.synopsys,
+    story: req.body.story,
     votes: req.body.votes
   });
 

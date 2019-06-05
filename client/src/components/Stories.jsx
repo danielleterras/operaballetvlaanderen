@@ -11,6 +11,7 @@ const Stories = ({ storiesStore }) => {
 
   return (
     <div className={styles.container}>
+      <Link to={ROUTES.landing}>Go back</Link>
       <Link to={ROUTES.addStory} className={styles.sub}>
         Schijf je eigen verhaal
       </Link>

@@ -22,9 +22,7 @@ const AddStory = ({ storiesStore, history }) => {
   };
 
   const genreInput = React.createRef();
-
   const authorInput = React.createRef();
-
   const titleInput = React.createRef();
   const synopsisInput = React.createRef();
   const storyInput = React.createRef();
@@ -32,20 +30,16 @@ const AddStory = ({ storiesStore, history }) => {
   const handleSubmit = e => {
     e.preventDefault();
     storiesStore.addStory({
-      genre: genreInput.current.value,
-
-      author: authorInput.current.value,
-
       title: titleInput.current.value,
+      genre: genreInput.current.value,
+      author: authorInput.current.value,
       synopsis: synopsisInput.current.value,
       story: storyInput.current.value
     });
 
-    genreInput.current.value = "";
-
-    authorInput.current.value = "";
-
     titleInput.current.value = "";
+    genreInput.current.value = "";
+    authorInput.current.value = "";
     synopsisInput.current.value = "";
     storyInput.current.value = "";
   };
@@ -56,8 +50,9 @@ const AddStory = ({ storiesStore, history }) => {
       sectionsColor={["#000", "#000", "#000", "#000", "#000", "#000"]}
       render={() => {
         return (
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className={styles.container}>
             <div className="section">
+              <Link to={ROUTES.landing} className={styles.back} />
               <div
                 style={{
                   display: "flex",
@@ -160,7 +155,7 @@ const AddStory = ({ storiesStore, history }) => {
                     <option value="Misdaad">Misdaad</option>
                     <option value="Mysterie">Mysterie</option>
                     <option value="Science fiction">Science fiction</option>
-                  </select>{" "}
+                  </select>
                 </div>
               </div>
             </div>
@@ -185,7 +180,7 @@ const AddStory = ({ storiesStore, history }) => {
                   <p>Vat hieronder kort je verhaal samen.</p>
                   <h2>Schrijf hier de synopsis.</h2>
 
-                  <input
+                  <textarea
                     type="text"
                     name="synopsys"
                     id="synopsys"
@@ -215,7 +210,7 @@ const AddStory = ({ storiesStore, history }) => {
                 </div>
                 <div>
                   <h2>Schrijf hier je verhaal.</h2>
-                  <input
+                  <textarea
                     type="text"
                     name="story"
                     id="story"
@@ -229,6 +224,9 @@ const AddStory = ({ storiesStore, history }) => {
                     className={styles.button}
                     value="Deel mijn verhaal"
                   />
+                  <Link to={ROUTES.stories} className={styles.sub}>
+                    Ontdek alle verhalen
+                  </Link>
                 </div>
               </div>
             </div>

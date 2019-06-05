@@ -1,0 +1,15 @@
+
+.back {
+    color: #F72442;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 13rem;
+}
+
+.back::before {
+    content: url(https://img.icons8.com/ios/35/ffffff/circled-left.png)
+}
+ 
+.back:hover {
+     content: url(https://img.icons8.com/ios/35/F72442/circled-left.png)
+}

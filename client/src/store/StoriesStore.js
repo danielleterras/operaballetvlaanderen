@@ -14,16 +14,8 @@ class StoriesStore {
     this.api.getAll().then(d => d.forEach(this._addStory));
   }
 
-  addStory = ({ type, author, genre, story, title, synopsis, votes }) => {
-    const newStory = new Story(
-      type,
-      genre,
-      author,
-      title,
-      synopsis,
-      story,
-      votes
-    );
+  addStory = ({ author, genre, story, title, synopsis, votes }) => {
+    const newStory = new Story(genre, author, title, synopsis, story, votes);
     this.stories.push(newStory);
     this.api
       .create(newStory)
