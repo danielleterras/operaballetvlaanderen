@@ -7,12 +7,7 @@ import { PropTypes, inject } from "mobx-react";
 import { Link } from "react-router-dom";
 import { ROUTES } from "../constants";
 
-import cube1 from "./../assets/cube_1.svg";
-import cube2 from "./../assets/Cube_1.gif";
-import cube3 from "./../assets/cube_3.svg";
-import cube4 from "./../assets/cube_4.svg";
-import cube5 from "./../assets/cube_5.svg";
-
+import cubes from "./../assets/Cubes.gif";
 import cube_small from "./../assets/cube_small.svg";
 
 const AddStory = ({ storiesStore, history }) => {
@@ -66,13 +61,13 @@ const AddStory = ({ storiesStore, history }) => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    height: "650px"
+                    height: "650px",
+                    width: "650px"
                   }}
                 >
-                  {/*<Cube />*/}
-                  <img src={cube3} alt="cube3" width="650px" height="350px" />
+                  <img src={cubes} alt="cube3" width="350px" height="350px" />
                 </div>
-                <div style={{ width: "600px", marginLeft: "-10rem" }}>
+                <div className={styles.paragraph}>
                   <p>We willen graag weten wie de auteur is van dit verhaal.</p>
                   <h2>Wat is jouw naam?</h2>
                   <input
@@ -100,13 +95,14 @@ const AddStory = ({ storiesStore, history }) => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    height: "650px"
+                    height: "650px",
+                    width: "650px"
                   }}
                 >
                   {/*<Cube />*/}
-                  <img src={cube1} alt="cube2" width="650px" height="350px" />
+                  <img src={cubes} alt="cube2" width="350px" height="350px" />
                 </div>
-                <div style={{ width: "600px", marginLeft: "-10rem" }}>
+                <div className={styles.paragraph}>
                   <p>Omschrijf je verhaal in één zin.</p>
                   <h2>Wat is de titel van je verhaal?</h2>
                   <input
@@ -134,13 +130,14 @@ const AddStory = ({ storiesStore, history }) => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    height: "650px"
+                    height: "650px",
+                    width: "650px"
                   }}
                 >
                   {/*<Cube />*/}
-                  <img src={cube5} alt="cube5" width="650px" height="350px" />
+                  <img src={cubes} alt="cube5" width="350px" height="350px" />
                 </div>
-                <div style={{ width: "600px", marginLeft: "-10rem" }}>
+                <div className={styles.paragraph}>
                   <p>Omschrijf je thema.</p>
                   <h2>Welke stijl schrijf je?</h2>
                   <select

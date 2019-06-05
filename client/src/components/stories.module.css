@@ -58,11 +58,8 @@ ul {
 }
 
 .back::before {
-    content: url(https://img.icons8.com/ios/35/ffffff/circled-left.png)
-}
- 
-.back:hover {
-     content: url(https://img.icons8.com/ios/35/F72442/circled-left.png)
+    content: url(https://img.icons8.com/ios/35/ffffff/circled-left.png);
+    padding: 44px;
 }
 
 .navigation {

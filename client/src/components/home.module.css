@@ -44,11 +44,14 @@ p {
   background-color: #F72442;
 
   margin-right: 1rem;
-  margin-top: 1.5rem;
   padding: .5rem 1rem;
 
   border: none;
   text-decoration: none;
+}
+
+.navigation {
+  margin-top: 3rem;
 }
 
 .submit {
@@ -125,4 +128,9 @@ p {
   background-image: url("../assets/step_6.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.paragraph {
+  width: 600px;
+  margin-left: -10rem;
 }

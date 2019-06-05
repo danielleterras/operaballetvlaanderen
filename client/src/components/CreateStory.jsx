@@ -9,11 +9,7 @@ import { Link } from "react-router-dom";
 import { ROUTES } from "../constants";
 
 import styles from "./createStory.module.css";
-import cube1 from "./../assets/cube_1.svg";
-import cube2 from "./../assets/Cube_1.gif";
-import cube3 from "./../assets/cube_3.svg";
-import cube4 from "./../assets/cube_4.svg";
-import cube5 from "./../assets/cube_5.svg";
+import cubes from "./../assets/Cubes.gif";
 
 import cube_small from "./../assets/cube_small.svg";
 
@@ -65,9 +61,9 @@ const CreateStory = ({ storiesStore }) => {
                   }}
                 >
                   {/*<Cube />*/}
-                  <img src={cube3} alt="cube3" width="650px" height="350px" />
+                  <img src={cubes} alt="cube3" width="300px" height="300px" />
                 </div>
-                <div style={{ width: "600px", marginLeft: "-10rem" }}>
+                <div className={styles.paragraph}>
                   <p>We willen graag weten wie de auteur is van dit verhaal.</p>
                   <h2>Wat is jouw naam?</h2>
                   <input
@@ -99,9 +95,9 @@ const CreateStory = ({ storiesStore }) => {
                   }}
                 >
                   {/*<Cube />*/}
-                  <img src={cube4} alt="cube4" width="650px" height="350px" />
+                  <img src={cubes} alt="cube4" width="300px" height="300px" />
                 </div>
-                <div style={{ width: "600px", marginLeft: "-10rem" }}>
+                <div className={styles.paragraph}>
                   <p>Kies een personage dat jou aanspreekt.</p>
                   <h2>Wie zou je willen zijn?*</h2>
                   <input
@@ -131,9 +127,9 @@ const CreateStory = ({ storiesStore }) => {
                   }}
                 >
                   {/*<Cube />*/}
-                  <img src={cube5} alt="cube5" width="650px" height="350px" />
+                  <img src={cubes} alt="cube5" width="300px" height="300px" />
                 </div>
-                <div style={{ width: "600px", marginLeft: "-10rem" }}>
+                <div className={styles.paragraph}>
                   <p>Omschrijf je thema.</p>
                   <h2>Welke stijl verkies je?</h2>
                   <select
@@ -170,9 +166,9 @@ const CreateStory = ({ storiesStore }) => {
                   }}
                 >
                   {/*<Cube />*/}
-                  <img src={cube1} alt="cube2" width="650px" height="350px" />
+                  <img src={cubes} alt="cube2" width="300px" height="300px" />
                 </div>
-                <div style={{ width: "600px", marginLeft: "-10rem" }}>
+                <div className={styles.paragraph}>
                   <p>Omschrijf je verhaal in één zin.</p>
                   <h2>Wat is de titel van je verhaal?</h2>
                   <input

@@ -71,7 +71,8 @@ h1 {
     border: none;
     border-bottom: #F72442 0.2rem solid;
     background: none;
-    color: #fff
+    color: #fff;
+    width: 730px;
   }
   
   .inputField::placeholder {
@@ -135,9 +136,12 @@ h1 {
   }
 
   .back::before {
-   content: url(https://img.icons8.com/ios/35/ffffff/circled-left.png)
+   content: url(https://img.icons8.com/ios/35/ffffff/circled-left.png);
+   padding: 44px;
   }
 
-  .back:hover {
-    content: url(https://img.icons8.com/ios/35/F72442/circled-left.png)
+  .paragraph {
+    width: 600px;
+    padding-right: 5rem;
+    margin-left: -20rem;
   }

@@ -10,7 +10,7 @@ import "./styles.css";
 import styles from "./home.module.css";
 import mouse from "./../assets/scroll_icon.svg";
 import cube1 from "./../assets/cube_1.svg";
-import cube2 from "./../assets/Cube_1.gif";
+import cubes from "./../assets/Cubes.gif";
 import cube3 from "./../assets/cube_3.svg";
 import cube4 from "./../assets/cube_4.svg";
 import cube5 from "./../assets/cube_5.svg";
@@ -40,7 +40,7 @@ class FullpageWrapper extends Component {
             <div>
               <div className="section">
                 <h1>Cubo</h1>
-                {/*<Cube />*/}
+                <Cube />
                 <div className={styles.scroll}>
                   <img src={mouse} alt="mouse" width="44" height="44" />
                   <p>Scroll naar beneden om te ontdekken</p>
@@ -68,7 +68,7 @@ class FullpageWrapper extends Component {
                   }}
                 >
                   {/*<Cube />*/}
-                  <img src={cube1} alt="cube1" width="300px" height="300px" />
+                  <img src={cubes} alt="cube1" width="300px" height="300px" />
                 </div>
                 <p style={{ display: "flex", justifyContent: "center" }}>
                   Ervaar op een unieke manier
@@ -93,9 +93,9 @@ class FullpageWrapper extends Component {
                     }}
                   >
                     {/*<Cube />*/}
-                    <img src={cube2} alt="cube2" width="350px" height="350px" />
+                    <img src={cubes} alt="cube2" width="350px" height="350px" />
                   </div>
-                  <div style={{ width: "600px", marginLeft: "-10rem" }}>
+                  <div className={styles.paragraph}>
                     <Link to={ROUTES.stories} className={styles.sub}>
                       Ontdek alle verhalen
                     </Link>
@@ -129,12 +129,14 @@ class FullpageWrapper extends Component {
                       </span>{" "}
                       en laat je horen, net zoals Opera Ballet Vlaanderen.
                     </p>
-                    <Link to={ROUTES.createStory} className={styles.button}>
-                      Creëer je verhaal
-                    </Link>
-                    <Link to={ROUTES.addStory} className={styles.button}>
-                      Schijf je verhaal
-                    </Link>
+                    <div className={styles.navigation}>
+                      <Link to={ROUTES.createStory} className={styles.button}>
+                        Creëer je verhaal
+                      </Link>
+                      <Link to={ROUTES.addStory} className={styles.button}>
+                        Schijf je verhaal
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>

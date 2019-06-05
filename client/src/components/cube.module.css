@@ -7,6 +7,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: -5rem;
   height: 80vh;
 }
 
@@ -33,7 +34,6 @@ body {
   height: 300px;
   width: 300px;
   display: block;
-  opacity: 1;
   transition: opacity 300ms;
   border: black solid 0.001rem;
   background: #fff;
@@ -41,6 +41,18 @@ body {
 	animation-duration: 10s;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
+}
+
+.light::after {
+  background-image: url(./../assets/light.gif);
+  background-size: 400px 400px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-top: -3rem;
+  margin-left: -3rem;
+  width: 50vw; 
+  height: 50vh;
+  content:"";
 }
 
 .cube figure:nth-of-type(1) {
@@ -71,6 +83,7 @@ body {
   }
 }
 
+{/*
 @-webkit-keyframes color_change {
   0% { box-shadow: inset 25px 25px 87px 89px red; }
   20% { box-shadow: inset 25px 25px 87px 89px orange; }
@@ -111,3 +124,4 @@ body {
   80% { box-shadow: inset 25px 25px 87px 89px blue; }
   100% { box-shadow: inset 25px 25px 87px 89px purple; }
 }
+*/}

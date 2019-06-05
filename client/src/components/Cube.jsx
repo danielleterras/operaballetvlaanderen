@@ -55,18 +55,20 @@ class Cube extends Component {
         transform: `translateZ(${zoom}px) rotateX(${x}deg) rotateY(${y}deg) rotateZ(${z}deg)`
       },
       containerStyle = { perspective: `${perspective}px` },
-      surfaceStyle = { opacity: opacity / 150 };
+      surfaceStyle = { opacity: opacity / 200 };
 
     return (
       <>
         <div className={styles.wrapper}>
           <div className={styles.container} style={containerStyle}>
-            <div className={styles.cube} style={cubeStyle}>
-              {Array(6)
-                .fill()
-                .map(() => (
-                  <figure style={surfaceStyle} />
-                ))}
+            <div className={styles.light}>
+              <div className={styles.cube} style={cubeStyle}>
+                {Array(6)
+                  .fill()
+                  .map(() => (
+                    <figure style={surfaceStyle} />
+                  ))}
+              </div>
             </div>
           </div>
         </div>

@@ -1,4 +1,40 @@
 
+ .cube1{
+    background-image: url("../assets/step_1.svg");  
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .cube2{
+    background-image: url("../assets/step_2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .cube3{
+    background-image: url("../assets/step_3.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .cube4{
+    background-image: url("../assets/step_4.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .cube5{
+    background-image: url("../assets/step_5.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .cube6{
+    background-image: url("../assets/step_6.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
 .back {
     color: #F72442;
     text-decoration: none;
@@ -7,9 +43,37 @@
 }
 
 .back::before {
-    content: url(https://img.icons8.com/ios/35/ffffff/circled-left.png)
+    content: url(https://img.icons8.com/ios/35/ffffff/circled-left.png);
+    padding: 44px;
 }
- 
-.back:hover {
-     content: url(https://img.icons8.com/ios/35/F72442/circled-left.png)
-}
+
+.inputField {
+    font-size: 1rem;
+    border: none;
+    border-bottom: #F72442 0.2rem solid;
+    background: none;
+    color: #fff;
+    width: 730px;
+  }
+  
+  .inputField::placeholder {
+    color: #F72442;
+  }
+  
+  .textField {
+    font-size: 1rem;
+    border: none;
+    background: #1A1A1A;;
+    color: white;
+    width: 730px;
+    height: 270px;
+  }
+  
+  .textField::placeholder {
+    color: white;
+  }
+
+  .paragraph {
+    width: 600px;
+    margin-left: -10rem;
+  }
