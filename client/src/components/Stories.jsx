@@ -26,22 +26,26 @@ const Stories = ({ storiesStore }) => {
               <div className={styles.header}>
                 <h2>{story.title}</h2>
                 <span className={styles.votes}>
-                  {story.votes ? (
+                  {story.liked ? (
                     <button
                       onClick={() => updateVotes(story)}
                       className={styles.heart}
                     >
                       <img
-                        src={outline_heart}
+                        src={filled_heart}
                         alt="heart"
                         width="20"
                         height="20"
                       />
                     </button>
                   ) : (
-                    <button className={styles.heart}>
+                    <button
+                      onClick={() => updateVotes(story)}
+                      className={styles.heart}
+                      // disabled={storiesStore.liked}
+                    >
                       <img
-                        src={filled_heart}
+                        src={outline_heart}
                         alt="heart"
                         width="20"
                         height="20"
@@ -55,8 +59,10 @@ const Stories = ({ storiesStore }) => {
               <div className={styles.template}>
                 <p>Door {story.author}</p>
                 <p>{story.synopsys}</p>
+                <Link to={`storyDetail/${story._id}`} className={layout.sub}>
+                  Lees meer...
+                </Link>
               </div>
-              {/*onClick={e => story.setVotes(e.target.value)}*/}
             </article>
           ))}
         </ul>

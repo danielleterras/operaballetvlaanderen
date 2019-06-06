@@ -21,8 +21,6 @@ class Story {
   setStory = value => (this.story = value);
   setVotes = value => (this.votes = value);
 
-  //setVotes = () => (this.votes = this.votes + 1);
-
   increment = () => {
     this.votes = this.votes + 1;
     console.log(this.votes);

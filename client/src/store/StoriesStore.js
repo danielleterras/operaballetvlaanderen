@@ -6,10 +6,10 @@ configure({ enforceActions: `observed` });
 
 class StoriesStore {
   stories = [];
+  liked = [];
 
   constructor(rootStore) {
     this.rootStore = rootStore;
-
     this.api = new Api(`stories`);
     this.api.getAll().then(d => d.forEach(this._addStory));
   }
@@ -31,9 +31,12 @@ class StoriesStore {
   };
 
   updateVotes = story => {
+    const like = this.liked.find(check => check.id === story.id);
+    console.log(like);
     const vote = this.stories.find(check => check.id === story.id);
     vote.increment();
-    console.log(vote);
+    runInAction(() => this.liked.push(story.id));
+    console.log(this.liked);
     this.api
       .update(story)
       .then(storyValues => story.updateFromServer(storyValues));
@@ -43,7 +46,9 @@ class StoriesStore {
 
 decorate(StoriesStore, {
   stories: observable,
-  addStory: action
+  addStory: action,
+  updateVotes: action,
+  liked: observable
 });
 
 export default StoriesStore;
