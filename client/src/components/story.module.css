@@ -1,0 +1,7 @@
+.italic {
+    font-style: italic;
+}
+
+.sub {
+    composes: sub from "./layout.module.css";
+}

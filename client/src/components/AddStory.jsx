@@ -1,7 +1,6 @@
 import React from "react";
 import "fullpage.js/vendors/scrolloverflow";
 import ReactFullpage from "@fullpage/react-fullpage";
-import styles from "./addStory.module.css";
 import { PropTypes, inject } from "mobx-react";
 
 import { Link } from "react-router-dom";
@@ -9,6 +8,9 @@ import { ROUTES } from "../constants";
 
 import cubes from "./../assets/Cubes.gif";
 import cube_small from "./../assets/cube_small.svg";
+
+import styles from "./addStory.module.css";
+import layout from "./layout.module.css";
 
 const AddStory = ({ storiesStore, history }) => {
   const redirect = () => {
@@ -48,23 +50,8 @@ const AddStory = ({ storiesStore, history }) => {
           <form onSubmit={handleSubmit} className={styles.container}>
             <div className="section">
               <Link to={ROUTES.landing} className={styles.back} />
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-around",
-                  alignItems: "center"
-                }}
-              >
-                <div
-                  className={styles.cube3}
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    height: "650px",
-                    width: "650px"
-                  }}
-                >
+              <div className={styles.flex}>
+                <div className={styles.cube3}>
                   <img src={cubes} alt="cube3" width="350px" height="350px" />
                 </div>
                 <div className={styles.paragraph}>
@@ -82,23 +69,8 @@ const AddStory = ({ storiesStore, history }) => {
               </div>
             </div>
             <div className="section">
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-around",
-                  alignItems: "center"
-                }}
-              >
-                <div
-                  className={styles.cube6}
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    height: "650px",
-                    width: "650px"
-                  }}
-                >
+              <div className={styles.flex}>
+                <div className={styles.cube6}>
                   {/*<Cube />*/}
                   <img src={cubes} alt="cube2" width="350px" height="350px" />
                 </div>
@@ -117,23 +89,8 @@ const AddStory = ({ storiesStore, history }) => {
               </div>
             </div>
             <div className="section">
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-around",
-                  alignItems: "center"
-                }}
-              >
-                <div
-                  className={styles.cube5}
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    height: "650px",
-                    width: "650px"
-                  }}
-                >
+              <div className={styles.flex}>
+                <div className={styles.cube5}>
                   {/*<Cube />*/}
                   <img src={cubes} alt="cube5" width="350px" height="350px" />
                 </div>
@@ -157,13 +114,7 @@ const AddStory = ({ storiesStore, history }) => {
               </div>
             </div>
             <div className="section">
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-around",
-                  alignItems: "center"
-                }}
-              >
+              <div className={styles.flex}>
                 <div>
                   {/*<Cube />*/}
                   <img
@@ -189,13 +140,7 @@ const AddStory = ({ storiesStore, history }) => {
               </div>
             </div>
             <div className="section">
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-around",
-                  alignItems: "center"
-                }}
-              >
+              <div className={styles.flex}>
                 <div>
                   {/*<Cube />*/}
                   <img
@@ -218,10 +163,10 @@ const AddStory = ({ storiesStore, history }) => {
 
                   <input
                     type="submit"
-                    className={styles.button}
+                    className={layout.button}
                     value="Deel mijn verhaal"
                   />
-                  <Link to={ROUTES.stories} className={styles.sub}>
+                  <Link to={ROUTES.stories} className={layout.sub}>
                     Ontdek alle verhalen
                   </Link>
                 </div>

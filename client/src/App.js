@@ -9,6 +9,7 @@ import Home from "./components/Home";
 import Stories from "./components/Stories";
 import AddStory from "./components/AddStory";
 import CreateStory from "./components/CreateStory";
+import Story from "./components/Story";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path={ROUTES.stories} component={Stories} />
         <Route path={ROUTES.addStory} component={AddStory} />
         <Route path={ROUTES.createStory} component={CreateStory} />
+        <Route path={ROUTES.story} component={Story} />
         <Route path={ROUTES.landing} exact strict component={Home} />
       </Switch>
     </>

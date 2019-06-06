@@ -1,0 +1,33 @@
+#fp-nav ul li:hover a.active span,
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li:hover a.active span,
+.fp-slidesNav ul li a.active span {
+  background-color: white;
+}
+
+#fp-nav ul li:hover a span,
+#fp-nav ul li a span,
+.fp-slidesNav ul li:hover a span,
+.fp-slidesNav ul li a span {
+  background-color: white;
+}
+
+.button {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #F72442;
+    margin-right: 1rem;
+    padding: .5rem 1rem;
+    border: none;
+    text-decoration: none;
+}
+
+.sub {
+    color: #F72442;
+    font-weight: bold;
+    background: none;
+    border:none;
+    font-size: 16px;
+    text-decoration: none;
+}

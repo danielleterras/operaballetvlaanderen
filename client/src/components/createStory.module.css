@@ -3,38 +3,50 @@
     background-image: url("../assets/step_1.svg");  
     background-repeat: no-repeat;
     background-position: center;
+
+    composes: cube1 from './home.module.css';
   }
   
   .cube2{
     background-image: url("../assets/step_2.svg");
     background-repeat: no-repeat;
     background-position: center;
+
+    composes: cube2 from './home.module.css';
   }
   
   .cube3{
     background-image: url("../assets/step_3.svg");
     background-repeat: no-repeat;
     background-position: center;
+
+    composes: cube3 from './home.module.css';
   }
   
   .cube4{
     background-image: url("../assets/step_4.svg");
     background-repeat: no-repeat;
     background-position: center;
+
+    composes: cube4 from './home.module.css';
   }
   
   .cube5{
     background-image: url("../assets/step_5.svg");
     background-repeat: no-repeat;
     background-position: center;
+
+    composes: cube5 from './home.module.css';
   }
   
   .cube6{
     background-image: url("../assets/step_6.svg");
     background-repeat: no-repeat;
     background-position: center;
+
+    composes: cube6 from './home.module.css';
   }
-  
+
 .back {
     color: #F72442;
     text-decoration: none;
@@ -75,5 +87,14 @@
 
   .paragraph {
     width: 600px;
-    margin-left: -10rem;
+    padding-right: 5rem;
+    margin-left: -20rem;
   }
+
+  .flex {
+    composes: flex from "./home.module.css";
+  }
+
+  .sub {
+    composes: sub from "./layout.module.css";
+}
