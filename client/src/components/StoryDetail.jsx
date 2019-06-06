@@ -9,18 +9,18 @@ import styles from "./stories.module.css";
 import layout from "./layout.module.css";
 
 const StoryDetail = ({ storiesStore, id }) => {
-  console.log(id);
-  const { stories, updateVotes } = storiesStore;
+	const { stories, updateVotes } = storiesStore;
 
-  return (
-    <>
-      <div className={styles.navigation}>
-        <Link to={ROUTES.landing} className={styles.back} />
-        <Link to={ROUTES.addStory} className={layout.sub}>
-          Schijf je eigen verhaal
-        </Link>
-      </div>
-      {/* <div className={styles.container}>
+	return (
+		<>
+			<p>{id}</p>
+			<div className={styles.navigation}>
+				<Link to={ROUTES.landing} className={styles.back} />
+				<Link to={ROUTES.addStory} className={layout.sub}>
+					Schijf je eigen verhaal
+				</Link>
+			</div>
+			{/* <div className={styles.container}>
         <ul className={styles.ul}>
           <article>
             <div className={styles.header}>
@@ -63,12 +63,12 @@ const StoryDetail = ({ storiesStore, id }) => {
           </article>
         </ul>
       </div> */}
-    </>
-  );
+		</>
+	);
 };
 
 StoryDetail.propTypes = {
-  storiesStore: PropTypes.observableObject.isRequired
+	storiesStore: PropTypes.observableObject.isRequired
 };
 
 export default inject("storiesStore")(observer(StoryDetail));
