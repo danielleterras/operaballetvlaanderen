@@ -15,7 +15,7 @@ import layout from "./layout.module.css";
 const AddStory = ({ storiesStore, history }) => {
   const redirect = () => {
     console.log(`State updated`);
-    history.push(`/`);
+    history.push(`/stories`);
   };
 
   const genreInput = React.createRef();
@@ -31,7 +31,8 @@ const AddStory = ({ storiesStore, history }) => {
       genre: genreInput.current.value,
       author: authorInput.current.value,
       synopsis: synopsisInput.current.value,
-      story: storyInput.current.value
+      story: storyInput.current.value,
+      redirect
     });
 
     titleInput.current.value = "";

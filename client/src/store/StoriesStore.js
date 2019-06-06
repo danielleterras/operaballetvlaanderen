@@ -15,7 +15,7 @@ class StoriesStore {
   }
 
   addStory = data => {
-    const newStory = new Story();
+    const newStory = new Story(data);
     newStory.updateFromServer(data);
     this.stories.push(newStory);
     this.api

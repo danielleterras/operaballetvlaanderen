@@ -38,7 +38,7 @@ exports.findAll = async (req, res) => {
     const stories = await Story.find();
     res.send(stories);
   } catch (err) {
-    res.status(500).send({err: err.launch || 'Error'});
+    res.status(500).send({err: err.story || 'Error'});
   }
 };
 
