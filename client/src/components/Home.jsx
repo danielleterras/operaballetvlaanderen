@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { ROUTES } from "../constants";
 
 import Cube from "./Cube";
+import SmallCube from "./SmallCube";
 
 import styles from "./home.module.css";
 import layout from "./layout.module.css";
@@ -35,13 +36,13 @@ class FullpageWrapper extends Component {
                   <span className={styles.bold}>Cubo</span>
                 </h1>
                 <div className={styles.cube}>
-                  {/*<Cube />*/}
-                  <img
+                  <SmallCube />
+                  {/* <img
                     src={cubes}
                     alt="Meet Cubo"
                     width="300px"
                     height="300px"
-                  />
+                  /> */}
                 </div>
                 <p style={{ display: "flex", justifyContent: "center" }}>
                   Ervaar op een unieke manier
@@ -50,8 +51,8 @@ class FullpageWrapper extends Component {
               <div className="section">
                 <div className={styles.flex}>
                   <div className={styles.cube2}>
-                    {/*<Cube />*/}
-                    <img src={cubes} alt="cube2" width="350px" height="350px" />
+                    <SmallCube />
+                    {/* <img src={cubes} alt="cube2" width="350px" height="350px" /> */}
                   </div>
                   <div className={styles.paragraph}>
                     <Link to={ROUTES.stories} className={layout.sub}>

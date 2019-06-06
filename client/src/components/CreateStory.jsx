@@ -4,6 +4,7 @@ import ReactFullpage from "@fullpage/react-fullpage";
 import { PropTypes, inject } from "mobx-react";
 
 import Cube from "./Cube";
+import SmallCube from "./SmallCube";
 
 import { Link } from "react-router-dom";
 import { ROUTES } from "../constants";
@@ -46,9 +47,9 @@ const CreateStory = ({ storiesStore }) => {
             <div className="section">
               <Link to={ROUTES.landing} className={styles.back} />
               <div className={styles.flex}>
-                <div className={styles.cube3}>
-                  {/*<Cube />*/}
-                  <img src={cubes} alt="cube3" width="300px" height="300px" />
+              <div className={styles.cube3}>
+                <SmallCube />
+                  {/* <img src={cubes} alt="cube3" width="300px" height="300px" /> */}
                 </div>
                 <div className={styles.paragraph}>
                   <p>We willen graag weten wie de auteur is van dit verhaal.</p>
@@ -67,8 +68,8 @@ const CreateStory = ({ storiesStore }) => {
             <div className="section">
               <div className={styles.flex}>
                 <div className={styles.cube4}>
-                  {/*<Cube />*/}
-                  <img src={cubes} alt="cube4" width="300px" height="300px" />
+                <SmallCube />
+                  {/* <img src={cubes} alt="cube4" width="300px" height="300px" /> */}
                 </div>
                 <div className={styles.paragraph}>
                   <p>Kies een personage dat jou aanspreekt.</p>
@@ -85,8 +86,8 @@ const CreateStory = ({ storiesStore }) => {
             <div className="section">
               <div className={styles.flex}>
                 <div className={styles.cube5}>
-                  {/*<Cube />*/}
-                  <img src={cubes} alt="cube5" width="300px" height="300px" />
+                <SmallCube />
+                  {/* <img src={cubes} alt="cube5" width="300px" height="300px" /> */}
                 </div>
                 <div className={styles.paragraph}>
                   <p>Omschrijf je thema.</p>
@@ -110,8 +111,8 @@ const CreateStory = ({ storiesStore }) => {
             <div className="section">
               <div className={styles.flex}>
                 <div className={styles.cube6}>
-                  {/*<Cube />*/}
-                  <img src={cubes} alt="cube2" width="300px" height="300px" />
+                <SmallCube />                  
+                {/* <img src={cubes} alt="cube2" width="300px" height="300px" /> */}
                 </div>
                 <div className={styles.paragraph}>
                   <p>Omschrijf je verhaal in één zin.</p>
@@ -130,15 +131,15 @@ const CreateStory = ({ storiesStore }) => {
             <div className="section">
               <div className={styles.flex}>
                 <div>
-                  {/*<Cube />*/}
-                  <img
+                <SmallCube />
+                  {/* <img
                     src={cube_small}
                     alt="cube2"
                     width="650px"
                     height="350px"
-                  />
+                  /> */}
                 </div>
-                <div>
+                <div className={styles.paragraphText}>
                   <p>
                     Om het verhaal een persoonlijke twist te geven, kan je hier
                     iets schrijven dat jou is overkomen in het thema dat je hebt

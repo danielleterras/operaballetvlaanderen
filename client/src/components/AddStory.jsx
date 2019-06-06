@@ -6,6 +6,8 @@ import { PropTypes, inject } from "mobx-react";
 import { Link } from "react-router-dom";
 import { ROUTES } from "../constants";
 
+import SmallCube from "./SmallCube";
+
 import cubes from "./../assets/Cubes.gif";
 import cube_small from "./../assets/cube_small.svg";
 
@@ -53,7 +55,8 @@ const AddStory = ({ storiesStore, history }) => {
               <Link to={ROUTES.landing} className={styles.back} />
               <div className={styles.flex}>
                 <div className={styles.cube3}>
-                  <img src={cubes} alt="cube3" width="350px" height="350px" />
+                <SmallCube />
+                  {/* <img src={cubes} alt="cube3" width="350px" height="350px" /> */}
                 </div>
                 <div className={styles.paragraph}>
                   <p>We willen graag weten wie de auteur is van dit verhaal.</p>
@@ -72,8 +75,8 @@ const AddStory = ({ storiesStore, history }) => {
             <div className="section">
               <div className={styles.flex}>
                 <div className={styles.cube6}>
-                  {/*<Cube />*/}
-                  <img src={cubes} alt="cube2" width="350px" height="350px" />
+                  <SmallCube />
+                  {/* <img src={cubes} alt="cube2" width="350px" height="350px" /> */}
                 </div>
                 <div className={styles.paragraph}>
                   <p>Omschrijf je verhaal in één zin.</p>
@@ -92,8 +95,8 @@ const AddStory = ({ storiesStore, history }) => {
             <div className="section">
               <div className={styles.flex}>
                 <div className={styles.cube5}>
-                  {/*<Cube />*/}
-                  <img src={cubes} alt="cube5" width="350px" height="350px" />
+                <SmallCube />
+                  {/* <img src={cubes} alt="cube5" width="350px" height="350px" /> */}
                 </div>
                 <div className={styles.paragraph}>
                   <p>Omschrijf je thema.</p>
@@ -117,15 +120,15 @@ const AddStory = ({ storiesStore, history }) => {
             <div className="section">
               <div className={styles.flex}>
                 <div>
-                  {/*<Cube />*/}
-                  <img
+                <SmallCube />
+                  {/* <img
                     src={cube_small}
                     alt="cube2"
                     width="650px"
                     height="350px"
-                  />
+                  /> */}
                 </div>
-                <div>
+                <div className={styles.paragraphText}>
                   <p>Vat hieronder kort je verhaal samen.</p>
                   <h2>Schrijf hier de synopsis.</h2>
 
@@ -143,15 +146,15 @@ const AddStory = ({ storiesStore, history }) => {
             <div className="section">
               <div className={styles.flex}>
                 <div>
-                  {/*<Cube />*/}
-                  <img
+                <SmallCube />
+                  {/* <img
                     src={cube_small}
                     alt="cube2"
                     width="650px"
                     height="350px"
-                  />
+                  /> */}
                 </div>
-                <div>
+                <div className={styles.paragraphText}>
                   <h2>Schrijf hier je verhaal.</h2>
                   <textarea
                     type="text"
