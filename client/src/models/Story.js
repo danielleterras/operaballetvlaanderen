@@ -2,8 +2,8 @@ import uuid from "uuid";
 import { decorate, observable, action, computed } from "mobx";
 
 class Story {
-  constructor(id = uuid.v4(), genre, author, title, synopsys, story, votes) {
-    this.id = id;
+  constructor(_id = uuid.v4(), genre, author, title, synopsys, story, votes) {
+    this.id = _id;
     this.genre = genre;
     this.author = author;
 
@@ -13,13 +13,14 @@ class Story {
     this.votes = 0;
   }
 
-  setId = id => (this.id = id);
+  setId = _id => (this._id = _id);
   setGenre = value => (this.genre = value);
   setAuthor = value => (this.author = value);
   setTitle = value => (this.title = value);
   setSynopsys = value => (this.synopsys = value);
   setStory = value => (this.story = value);
   setVotes = value => (this.votes = value);
+
   //setVotes = () => (this.votes = this.votes + 1);
 
   increment = () => {
@@ -29,7 +30,7 @@ class Story {
 
   get values() {
     return {
-      id: this.id,
+      _id: this.id,
       genre: this.genre,
       author: this.author,
       title: this.title,
@@ -51,7 +52,7 @@ class Story {
 }
 
 decorate(Story, {
-  id: observable,
+  _id: observable,
   setId: action,
   values: computed,
   genre: observable,
@@ -66,8 +67,7 @@ decorate(Story, {
   setStory: action,
   votes: observable,
   setVotes: action,
-  increment: action,
-  decrement: action
+  increment: action
 });
 
 export default Story;

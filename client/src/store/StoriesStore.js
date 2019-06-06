@@ -14,8 +14,9 @@ class StoriesStore {
     this.api.getAll().then(d => d.forEach(this._addStory));
   }
 
-  addStory = ({ author, genre, story, title, synopsis, votes }) => {
-    const newStory = new Story(genre, author, title, synopsis, story, votes);
+  addStory = data => {
+    const newStory = new Story();
+    newStory.updateFromServer(data);
     this.stories.push(newStory);
     this.api
       .create(newStory)
@@ -23,15 +24,20 @@ class StoriesStore {
   };
 
   _addStory = values => {
+    console.log(values);
     const story = new Story();
     story.updateFromServer(values);
     runInAction(() => this.stories.push(story));
   };
 
-  vote = story => {
+  updateVotes = story => {
     const vote = this.stories.find(check => check.id === story.id);
     vote.increment();
     console.log(vote);
+    this.api
+      .update(story)
+      .then(storyValues => story.updateFromServer(storyValues));
+    console.log(story);
   };
 }
 
