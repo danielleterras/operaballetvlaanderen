@@ -21,19 +21,19 @@ const CreateStory = ({ storiesStore }) => {
   const authorInput = React.createRef();
 
   const titleInput = React.createRef();
-  const synopsisInput = React.createRef();
+  const synopsysInput = React.createRef();
 
   const handleSubmit = e => {
     e.preventDefault();
     storiesStore.addStory({
       title: titleInput.current.value,
       genre: genreInput.current.value,
-      synopsis: synopsisInput.current.value,
+      synopsys: synopsysInput.current.value,
       author: authorInput.current.value
     });
     titleInput.current.value = "";
     genreInput.current.value = "";
-    synopsisInput.current.value = "";
+    synopsysInput.current.value = "";
     authorInput.current.value = "";
   };
 
@@ -47,9 +47,8 @@ const CreateStory = ({ storiesStore }) => {
             <div className="section">
               <Link to={ROUTES.landing} className={styles.back} />
               <div className={styles.flex}>
-              <div className={styles.cube3}>
-                <SmallCube />
-                  {/* <img src={cubes} alt="cube3" width="300px" height="300px" /> */}
+                <div className={styles.cube3}>
+                  <SmallCube />
                 </div>
                 <div className={styles.paragraph}>
                   <p>We willen graag weten wie de auteur is van dit verhaal.</p>
@@ -68,8 +67,7 @@ const CreateStory = ({ storiesStore }) => {
             <div className="section">
               <div className={styles.flex}>
                 <div className={styles.cube4}>
-                <SmallCube />
-                  {/* <img src={cubes} alt="cube4" width="300px" height="300px" /> */}
+                  <SmallCube />
                 </div>
                 <div className={styles.paragraph}>
                   <p>Kies een personage dat jou aanspreekt.</p>
@@ -86,8 +84,7 @@ const CreateStory = ({ storiesStore }) => {
             <div className="section">
               <div className={styles.flex}>
                 <div className={styles.cube5}>
-                <SmallCube />
-                  {/* <img src={cubes} alt="cube5" width="300px" height="300px" /> */}
+                  <SmallCube />
                 </div>
                 <div className={styles.paragraph}>
                   <p>Omschrijf je thema.</p>
@@ -111,8 +108,7 @@ const CreateStory = ({ storiesStore }) => {
             <div className="section">
               <div className={styles.flex}>
                 <div className={styles.cube6}>
-                <SmallCube />                  
-                {/* <img src={cubes} alt="cube2" width="300px" height="300px" /> */}
+                  <SmallCube />
                 </div>
                 <div className={styles.paragraph}>
                   <p>Omschrijf je verhaal in één zin.</p>
@@ -131,13 +127,7 @@ const CreateStory = ({ storiesStore }) => {
             <div className="section">
               <div className={styles.flex}>
                 <div>
-                <SmallCube />
-                  {/* <img
-                    src={cube_small}
-                    alt="cube2"
-                    width="650px"
-                    height="350px"
-                  /> */}
+                  <SmallCube />
                 </div>
                 <div className={styles.paragraphText}>
                   <p>
@@ -153,7 +143,7 @@ const CreateStory = ({ storiesStore }) => {
                     id="synopsys"
                     placeholder="Typ hier je anekdote"
                     className={styles.textField}
-                    ref={synopsisInput}
+                    ref={synopsysInput}
                   />
                   <Link to={ROUTES.story} className={layout.sub}>
                     <input
