@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const ObjectId = mongoose.Schema.Types.ObjectId;
+// const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const StorySchema = mongoose.Schema(
   {
@@ -8,8 +8,8 @@ const StorySchema = mongoose.Schema(
     author: String,
     synopsys: String,
     story: String,
-    votes: Number,
-    storyId: ObjectId
+    votes: Number
+    // storyId: ObjectId
   },
   {
     timestamps: true

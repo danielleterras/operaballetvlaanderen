@@ -62,10 +62,8 @@ exports.findOne = async (req, res) => {
 
 exports.update = async (req, res) => {
   try {
-    const story = await Story.findOneAndUpdate(
-      {
-        _id: req.params.storyId
-      },
+    const story = await Story.findByIdAndUpdate(
+      req.params.id,
       {
         votes: req.body.votes
       },

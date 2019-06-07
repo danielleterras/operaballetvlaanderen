@@ -5,50 +5,51 @@ import Api from "./../api";
 configure({ enforceActions: `observed` });
 
 class StoriesStore {
-  stories = [];
-  liked = [];
+	stories = [];
+	liked = [];
 
-  constructor(rootStore) {
-    this.rootStore = rootStore;
-    this.api = new Api(`stories`);
-    this.api.getAll().then(d => d.forEach(this._addStory));
-  }
+	constructor(rootStore) {
+		this.rootStore = rootStore;
+		this.api = new Api(`stories`);
+		this.api.getAll().then(d => d.forEach(this._addStory));
+	}
 
-  addStory = data => {
-    const newStory = new Story(data);
-    newStory.updateFromServer(data);
-    this.stories.push(newStory);
-    this.api
-      .create(newStory)
-      .then(storyValues => newStory.updateFromServer(storyValues));
-  };
+	addStory = data => {
+		const newStory = new Story(data);
+		newStory.updateFromServer(data);
+		this.stories.push(newStory);
+		this.api
+			.create(newStory)
+			.then(storyValues => newStory.updateFromServer(storyValues));
+	};
 
-  _addStory = values => {
-    console.log(values);
-    const story = new Story();
-    story.updateFromServer(values);
-    runInAction(() => this.stories.push(story));
-  };
+	_addStory = values => {
+		console.log(values);
+		const story = new Story();
+		story.updateFromServer(values);
+		runInAction(() => this.stories.push(story));
+	};
 
-  updateVotes = story => {
-    const like = this.liked.find(check => check.id === story.id);
-    console.log(like);
-    const vote = this.stories.find(check => check.id === story.id);
-    vote.increment();
-    runInAction(() => this.liked.push(story.id));
-    console.log(this.liked);
-    this.api
-      .update(story)
-      .then(storyValues => story.updateFromServer(storyValues));
-    console.log(story);
-  };
+	updateVotes = story => {
+		const like = this.liked.find(check => check === story._id);
+		if (like) {
+			console.log("already voted");
+		} else {
+			const vote = this.stories.find(check => check.id === story.id);
+			vote.increment();
+			runInAction(() => this.liked.push(story._id));
+			this.api
+				.update(story)
+				.then(storyValues => story.updateFromServer(storyValues));
+		}
+	};
 }
 
 decorate(StoriesStore, {
-  stories: observable,
-  addStory: action,
-  updateVotes: action,
-  liked: observable
+	stories: observable,
+	liked: observable,
+	addStory: action,
+	updateVotes: action
 });
 
 export default StoriesStore;
