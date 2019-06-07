@@ -15,29 +15,37 @@ class StoriesStore {
 	}
 
 	addStory = data => {
-		const newStory = new Story(data);
+		console.log(data.story);
+		const newStory = new Story(
+			data.genre,
+			data.author,
+			data.title,
+			data.synopsis,
+			data.story
+		);
 		newStory.updateFromServer(data);
 		this.stories.push(newStory);
+		console.log(newStory);
 		this.api
 			.create(newStory)
 			.then(storyValues => newStory.updateFromServer(storyValues));
 	};
 
 	_addStory = values => {
-		console.log(values);
 		const story = new Story();
 		story.updateFromServer(values);
 		runInAction(() => this.stories.push(story));
 	};
 
 	updateVotes = story => {
-		const like = this.liked.find(check => check === story._id);
+		console.log(story);
+		const like = this.liked.find(check => check === story.id);
 		if (like) {
 			console.log("already voted");
 		} else {
 			const vote = this.stories.find(check => check.id === story.id);
 			vote.increment();
-			runInAction(() => this.liked.push(story._id));
+			runInAction(() => this.liked.push(story.id));
 			this.api
 				.update(story)
 				.then(storyValues => story.updateFromServer(storyValues));

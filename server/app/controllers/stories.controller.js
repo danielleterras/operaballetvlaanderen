@@ -10,7 +10,7 @@ exports.create = (req, res) => {
   if (!req.body.author) {
     return res.status(500).send({err: 'Author can not be empty'});
   }
-  if (!req.body.synopsys) {
+  if (!req.body.synopsis) {
     return res.status(500).send({err: 'Synopsis can not be empty'});
   }
   if (!req.body.story) {
@@ -20,9 +20,9 @@ exports.create = (req, res) => {
     title: req.body.title,
     genre: req.body.genre,
     author: req.body.author,
-    synopsys: req.body.synopsys,
+    synopsis: req.body.synopsis,
     story: req.body.story,
-    votes: req.body.votes
+    votes: 0
   });
 
   story

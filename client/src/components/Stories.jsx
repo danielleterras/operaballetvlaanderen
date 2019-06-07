@@ -22,6 +22,7 @@ const Stories = ({ storiesStore }) => {
 			<div className={styles.container}>
 				<ul className={styles.ul}>
 					{stories.map(story => (
+						// console.log(story)
 						<article key={story.id}>
 							<div className={styles.header}>
 								<h2>{story.title}</h2>
@@ -58,7 +59,7 @@ const Stories = ({ storiesStore }) => {
 							</div>
 							<div className={styles.template}>
 								<p>Door {story.author}</p>
-								<p>{story.synopsys}</p>
+								<p>{story.synopsis}</p>
 
 								<Link to={`story/${story._id}`} className={layout.sub}>
 									Lees meer...

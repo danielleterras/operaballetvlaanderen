@@ -2,22 +2,21 @@ import uuid from "uuid";
 import { decorate, observable, action, computed } from "mobx";
 
 class Story {
-	constructor(_id = uuid.v4(), genre, author, title, synopsys, story, votes) {
+	constructor(_id = uuid.v4(), genre, author, title, synopsis, story) {
 		this.id = _id;
 		this.genre = genre;
 		this.author = author;
-
 		this.title = title;
-		this.synopsys = synopsys;
+		this.synopsis = synopsis;
 		this.story = story;
 		this.votes = 0;
 	}
 
-	setId = _id => (this._id = _id);
+	setId = _id => (this.id = _id);
 	setGenre = value => (this.genre = value);
 	setAuthor = value => (this.author = value);
 	setTitle = value => (this.title = value);
-	setSynopsys = value => (this.synopsys = value);
+	setSynopsys = value => (this.synopsis = value);
 	setStory = value => (this.story = value);
 	setVotes = value => (this.votes = value);
 
@@ -31,7 +30,7 @@ class Story {
 			genre: this.genre,
 			author: this.author,
 			title: this.title,
-			synopsys: this.synopsys,
+			synopsis: this.synopsis,
 			story: this.story,
 			votes: this.votes
 		};
@@ -42,7 +41,7 @@ class Story {
 		this.setGenre(values.genre);
 		this.setAuthor(values.author);
 		this.setTitle(values.title);
-		this.setSynopsys(values.synopsys);
+		this.setSynopsys(values.synopsis);
 		this.setStory(values.story);
 		this.setVotes(values.votes);
 	};
@@ -58,7 +57,7 @@ decorate(Story, {
 	setAuthor: action,
 	title: observable,
 	setTitle: action,
-	synopsys: observable,
+	synopsis: observable,
 	setSynopsys: action,
 	story: observable,
 	setStory: action,

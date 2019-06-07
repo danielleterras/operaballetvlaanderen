@@ -18,7 +18,7 @@ class Api {
 
 	update = async story => {
 		const r = await fetch(
-			`/api/${this.entity}/${story._id}`,
+			`/api/${this.entity}/${story.id}`,
 			this.getOptions("put", story.values)
 		);
 		return await r.json();
