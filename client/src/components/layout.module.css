@@ -21,6 +21,7 @@
     padding: .5rem 1rem;
     border: none;
     text-decoration: none;
+    width: 200px;
 }
 .button:hover {
   color: #F72442;

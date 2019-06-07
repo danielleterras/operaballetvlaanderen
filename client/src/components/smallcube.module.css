@@ -7,13 +7,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 30vh;
   }
   
   .container {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     transition: perspective 300ms ease;
   }
   

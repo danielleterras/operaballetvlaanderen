@@ -79,6 +79,7 @@ p {
   align-items: center;
   height: 650px;
   width:  650px;
+  z-index: 0;
 }
 
 .cube3{
@@ -91,6 +92,7 @@ p {
   align-items: center;
   height: 650px;
   width:  650px;
+  z-index: 0;
 }
 
 .cube4{
@@ -103,6 +105,7 @@ p {
   align-items: center;
   height: 650px;
   width:  650px;
+  z-index: 0;
 }
 
 .cube5{
@@ -115,6 +118,7 @@ p {
   align-items: center;
   height: 650px;
   width:  650px;
+  z-index: 0;
 }
 
 .cube6{
@@ -127,11 +131,13 @@ p {
   align-items: center;
   height: 650px;
   width:  650px;
+  z-index: 0;
 }
 
 .paragraph {
   width: 600px;
   margin-left: -10rem;
+  z-index: 1;
 }
 
 .flex {
@@ -255,14 +261,6 @@ p {
   align-items: center;
   height: 500px;
   width:  500px;
-}
-
-.paragraph {
-  width: 600px;
-  margin-left: -10rem;
-  overflow: auto; 
-  width:700px; 
-  height:600px;
 }
 
 .flex {

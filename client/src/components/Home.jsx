@@ -37,12 +37,6 @@ class FullpageWrapper extends Component {
                 </h1>
                 <div className={styles.cube}>
                   <SmallCube />
-                  {/* <img
-                    src={cubes}
-                    alt="Meet Cubo"
-                    width="300px"
-                    height="300px"
-                  /> */}
                 </div>
                 <p style={{ display: "flex", justifyContent: "center" }}>
                   Ervaar op een unieke manier
@@ -52,7 +46,6 @@ class FullpageWrapper extends Component {
                 <div className={styles.flex}>
                   <div className={styles.cube2}>
                     <SmallCube />
-                    {/* <img src={cubes} alt="cube2" width="350px" height="350px" /> */}
                   </div>
                   <div className={styles.paragraph}>
                     <Link to={ROUTES.stories} className={layout.sub}>

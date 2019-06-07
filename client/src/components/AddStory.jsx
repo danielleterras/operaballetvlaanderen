@@ -52,11 +52,9 @@ const AddStory = ({ storiesStore, history }) => {
         return (
           <form onSubmit={handleSubmit} className={styles.container}>
             <div className="section">
-              <Link to={ROUTES.landing} className={styles.back} />
               <div className={styles.flex}>
                 <div className={styles.cube3}>
-                <SmallCube />
-                  {/* <img src={cubes} alt="cube3" width="350px" height="350px" /> */}
+                  <SmallCube />
                 </div>
                 <div className={styles.paragraph}>
                   <p>We willen graag weten wie de auteur is van dit verhaal.</p>
@@ -95,7 +93,7 @@ const AddStory = ({ storiesStore, history }) => {
             <div className="section">
               <div className={styles.flex}>
                 <div className={styles.cube5}>
-                <SmallCube />
+                  <SmallCube />
                   {/* <img src={cubes} alt="cube5" width="350px" height="350px" /> */}
                 </div>
                 <div className={styles.paragraph}>
@@ -120,13 +118,7 @@ const AddStory = ({ storiesStore, history }) => {
             <div className="section">
               <div className={styles.flex}>
                 <div>
-                <SmallCube />
-                  {/* <img
-                    src={cube_small}
-                    alt="cube2"
-                    width="650px"
-                    height="350px"
-                  /> */}
+                  <SmallCube />
                 </div>
                 <div className={styles.paragraphText}>
                   <p>Vat hieronder kort je verhaal samen.</p>
@@ -146,13 +138,7 @@ const AddStory = ({ storiesStore, history }) => {
             <div className="section">
               <div className={styles.flex}>
                 <div>
-                <SmallCube />
-                  {/* <img
-                    src={cube_small}
-                    alt="cube2"
-                    width="650px"
-                    height="350px"
-                  /> */}
+                  <SmallCube />
                 </div>
                 <div className={styles.paragraphText}>
                   <h2>Schrijf hier je verhaal.</h2>
@@ -164,15 +150,16 @@ const AddStory = ({ storiesStore, history }) => {
                     className={styles.textField}
                     ref={storyInput}
                   />
-
-                  <input
-                    type="submit"
-                    className={layout.button}
-                    value="Deel mijn verhaal"
-                  />
-                  <Link to={ROUTES.stories} className={layout.sub}>
-                    Ontdek alle verhalen
-                  </Link>
+                  <div className={styles.navigation}>
+                    <input
+                      type="submit"
+                      className={layout.button}
+                      value="Deel mijn verhaal"
+                    />
+                    <Link to={ROUTES.stories} className={layout.sub}>
+                      Ontdek alle verhalen
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
