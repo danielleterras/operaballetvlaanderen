@@ -22,12 +22,11 @@ const Stories = ({ storiesStore }) => {
       <div className={styles.container}>
         <ul className={styles.ul}>
           {stories.map(story => (
-            // console.log(story)
             <article key={story.id}>
               <div className={styles.header}>
                 <h2>{story.title}</h2>
                 <span className={styles.votes}>
-                  {story.liked ? (
+                  {story.like ? (
                     <button
                       onClick={() => updateVotes(story)}
                       className={styles.heart}

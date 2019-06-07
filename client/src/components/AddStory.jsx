@@ -3,6 +3,8 @@ import "fullpage.js/vendors/scrolloverflow";
 import ReactFullpage from "@fullpage/react-fullpage";
 import { PropTypes, inject } from "mobx-react";
 
+import { withRouter } from "react-router-dom";
+
 import { Link } from "react-router-dom";
 import { ROUTES } from "../constants";
 
@@ -15,9 +17,9 @@ import styles from "./addStory.module.css";
 import layout from "./layout.module.css";
 
 const AddStory = ({ storiesStore, history }) => {
-  const redirect = () => {
+  const redirect = id => {
     console.log(`State updated`);
-    history.push(`/stories`);
+    history.push(`/stories/${id}`);
   };
 
   const genreInput = React.createRef();
@@ -64,9 +66,10 @@ const AddStory = ({ storiesStore, history }) => {
                     type="text"
                     name="author"
                     id="author"
-                    placeholder="Typ hier je antwoord"
+                    placeholder="Typ hier je naam"
                     className={styles.inputField}
                     ref={authorInput}
+                    required
                   />
                 </div>
               </div>
@@ -83,9 +86,10 @@ const AddStory = ({ storiesStore, history }) => {
                     type="text"
                     name="title"
                     id="title"
-                    placeholder="Typ hier je antwoord"
+                    placeholder="Typ hier je titel"
                     className={styles.inputField}
                     ref={titleInput}
+                    required
                   />
                 </div>
               </div>
@@ -103,6 +107,7 @@ const AddStory = ({ storiesStore, history }) => {
                     name="genre"
                     className={styles.inputField}
                     ref={genreInput}
+                    required
                   >
                     <option>-- Select a category --</option>
                     <option value="Romantiek">Romantiek</option>
@@ -122,14 +127,14 @@ const AddStory = ({ storiesStore, history }) => {
                 <div className={styles.paragraphText}>
                   <p>Vat hieronder kort je verhaal samen.</p>
                   <h2>Schrijf hier de synopsis.</h2>
-
                   <textarea
                     type="text"
                     name="synopsys"
                     id="synopsys"
-                    placeholder="Typ hier je antwoord"
+                    placeholder="Typ hier je synopsis"
                     className={styles.textField}
                     ref={synopsysInput}
+                    required
                   />
                 </div>
               </div>
@@ -145,9 +150,10 @@ const AddStory = ({ storiesStore, history }) => {
                     type="text"
                     name="story"
                     id="story"
-                    placeholder="Typ hier je antwoord"
+                    placeholder="Typ hier je verhaal"
                     className={styles.textField}
                     ref={storyInput}
+                    required
                   />
                   <div className={styles.navigation}>
                     <input
@@ -173,4 +179,4 @@ AddStory.propTypes = {
   storiesStore: PropTypes.observableObject.isRequired
 };
 
-export default inject(`storiesStore`)(AddStory);
+export default inject(`storiesStore`)(withRouter(AddStory));
