@@ -76,7 +76,7 @@ const AddStory = ({ storiesStore, history }) => {
             </div>
             <div className="section">
               <div className={styles.flex}>
-                <div className={styles.cube6}>
+                <div className={styles.cube4}>
                   <SmallCube />
                 </div>
                 <div className={styles.paragraph}>
@@ -121,7 +121,7 @@ const AddStory = ({ storiesStore, history }) => {
             </div>
             <div className="section">
               <div className={styles.flex}>
-                <div>
+                <div className={styles.cube6}>
                   <SmallCube />
                 </div>
                 <div className={styles.paragraphText}>
@@ -141,7 +141,7 @@ const AddStory = ({ storiesStore, history }) => {
             </div>
             <div className="section">
               <div className={styles.flex}>
-                <div>
+                <div className={styles.cube7}>
                   <SmallCube />
                 </div>
                 <div className={styles.paragraphText}>

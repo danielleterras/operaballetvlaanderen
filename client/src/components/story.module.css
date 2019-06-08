@@ -5,3 +5,8 @@
 .sub {
     composes: sub from "./layout.module.css";
 }
+
+.storyparagraph {
+    margin-left: 2rem;
+    margin-top: 5rem;
+}

@@ -263,6 +263,18 @@ p {
   width:  500px;
 }
 
+.cube7{
+  background-image: url("../assets/step_7.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width:  500px;
+}
+
 .flex {
   display: flex;
   align-items: center;
@@ -291,29 +303,100 @@ p {
   display: flex;
 }
 
-@media screen and (max-width: 1024px) {
+
+@media screen and (max-width: 1500px) {
   .paragraph {
-  width: 500px;
-  margin-left: 0rem;
-  margin-right: 5rem;
+    width: 600px;
+    margin-left: -10rem;
+    margin-right: 5rem;
   } 
-  .cube2, .cube3, .cube4, .cube5, .cube6 {
-    height: 350px;
-    width:  350px;
+  .cube1, .cube2, .cube3, .cube4, .cube5, .cube6, .cube7 {
+    height: 300px;
+    width:  300px;
+    margin-top: -25rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+  .paragraph {
+    width: 700px;
+    margin-left: -40rem;
+    margin-top: 15rem;
+  } 
+  .cube1, .cube2, .cube3, .cube4, .cube5, .cube6, .cube7 {
+    height: 300px;
+    width:  300px;
+    margin-left: 8rem;
   }
 
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 800px) {
+  .paragraph {
+    width: 600px;
+    margin-left: -25rem;
+    margin-top: 25rem;
+    height:500px;
+    overflow:auto;
+  } 
+  .cube1, .cube2, .cube3, .cube4, .cube5, .cube6, .cube7 {
+    margin-left: 5rem;
+    margin-top: -35rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .paragraph {
+    margin-left: -20rem;
+    width: 500px;
+    height:300px;
+    overflow:auto;
+  } 
+  .cube1, .cube2, .cube3, .cube4, .cube5, .cube6, .cube7 {
+    margin-left: 0rem;
+    margin-top: -25rem;
+  }
+}
+@media screen and (max-width: 520px) {
+  .paragraph {
+    width: 400px;
+    margin-left: -25rem;
+    height:330px;
+    margin-top: 20rem;
+  } 
+  .cube1, .cube2, .cube3, .cube4, .cube5, .cube6, .cube7 {
+    margin-left: 5rem;
+    margin-top: -25rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
   .paragraph {
   width: 400px;
-  margin-left: -3rem;
+  margin-left: -15rem;
+  height:500px;
+  margin-top: 12rem;
+
  
   } 
-
-  .cube2, .cube3, .cube4, .cube5, .cube6 {
-    height: 75px;
-    width: 75px;
-
+  .cube2, .cube3, .cube4, .cube5, .cube6, .cube7 {
+    height: 120px;
+    width: 120px;
+    margin-left: 10rem;
+    margin-top: -37rem;
   }
+}
+@media screen and (max-width: 320px) {
+  .paragraph {
+    width:400px;
+    margin-left: -12rem;
+    height:350px;
+    margin-top: 8rem;
+  } 
+  .cube2, .cube3, .cube4, .cube5, .cube6, .cube7 {
+    height: 120px;
+    width: 120px;
+    margin-left: 6rem;
+    margin-top: -25rem;
+  }
+
 }

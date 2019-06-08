@@ -116,6 +116,14 @@ h1 {
     composes: cube6 from './home.module.css';
   }
 
+  .cube7{
+    background-image: url("../assets/step_7.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    composes: cube7 from './home.module.css';
+  }
+
   .flex {
     composes: flex from "./home.module.css";
   }
@@ -153,25 +161,144 @@ h1 {
 }
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1500px) {
   .paragraph {
     width: 400px;
-    margin-left: -3rem;
+    margin-left: -70rem;
+    margin-top: 15rem;
   }
   .inputField {
-    width: 350px;
+    width: 400px;
   }
   .textField {
     font-size: 1rem;
     width: 600px;
     margin-right: 300px;
   }
+  .textField {
+    width: 700px;
+  }
+  .back {
+    margin-left: 6rem;
+}
+
+  .paragraphText {
+    width: 650px;
+    padding-right: 5rem;
+    margin-left: -40rem;
+    margin-top: 20rem;
+  }
+  .textField{
+    height: 300px;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .paragraph {
+    width: 350px;
+    margin-left: -40rem;
+    margin-top: 30rem;
+  }
+  .paragraphText {
+    z-index: 1;
+    width: 600px;
+    margin-left: -20rem;
+  }
+  .textField{
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 700px) {
   .paragraphText {
     width: 500px;
-    padding-right: 5rem;
+    margin-left: -10rem;
+    margin-top: 15rem;
+  }
+  .textField{
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .paragraph {
+    width: 350px;
+    margin-left: -20rem;
+  }
+  .paragraphText {
+    width: 400px;
+    margin-left: -30rem;
+    z-index: 1;
+  }
+  .textField{
+    width: 400px;
+  }
+
+}
+@media screen and (max-width: 520px) {
+  .paragraph {
+    width: 350px;
+    margin-left: -20rem;
+  }
+  .inputField {
+    width: 200px;
+  }
+  .paragraphText {
+    width: 350px;
+    margin-left: -20rem;
     z-index: 1;
   }
   .back {
-    margin-left: 13rem;
+    margin-left: 0rem;
 }
 }
+
+@media screen and (max-width: 420px) {
+  .paragraph {
+    margin-left: -12rem;
+    width: 500px;
+  }
+  .paragraphText {
+    width: 300px;
+    margin-left: -14rem;
+    z-index: 1;
+    margin-top: 5rem;
+  }
+  .textField {
+    width: 300px;
+  }
+
+}
+@media screen and (max-width: 320px) {
+  .paragraph {
+    margin-left: -12rem;
+    width: 500px;
+    margin-top: 18rem;
+  }
+  .paragraphText {
+    width: 200px;
+    margin-left: -20em;
+    z-index: 1;
+    margin-top: 5rem;
+  }
+  .textField {
+    width: 220px;
+    height: 160px;
+  }
+
+}
+
+/* @media screen and (max-width: 430px) {
+  .paragraphText {
+    width: 200px;
+    margin-left: -12rem;
+    z-index: 1;
+    margin-top: 5rem;
+  }
+  .textField {
+    width: 220px;
+    height: 200px;
+  }
+
+} */

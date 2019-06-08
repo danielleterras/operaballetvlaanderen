@@ -126,7 +126,7 @@ const CreateStory = ({ storiesStore }) => {
             </div>
             <div className="section">
               <div className={styles.flex}>
-                <div>
+                <div className={styles.cube7}>
                   <SmallCube />
                 </div>
                 <div className={styles.paragraphText}>

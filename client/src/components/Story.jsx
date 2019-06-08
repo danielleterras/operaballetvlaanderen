@@ -11,7 +11,7 @@ const Stories = ({ storiesStore }) => {
 
   return (
     <div className="section">
-      <div>
+      <div className={styles.storyparagraph}>
         <h3>Genoeg vragen.</h3>
         <h2>Dit is jouw verhaal</h2>
         <p>story.title</p>
