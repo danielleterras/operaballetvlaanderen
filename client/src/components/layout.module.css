@@ -17,11 +17,14 @@
     font-weight: bold;
     color: white;
     background-color: #F72442;
-    margin-right: 1rem;
+    margin-top: 0.5rem;
     padding: .5rem 1rem;
     border: none;
     text-decoration: none;
     width: 200px;
+    text-align: center;
+    float: right;
+    margin-left: 1rem;
 }
 .button:hover {
   color: #F72442;
@@ -36,6 +39,7 @@
     border:none;
     font-size: 16px;
     text-decoration: none;
+    margin-top: 1rem;
 }
 
 @media screen and (max-width: 420px) {

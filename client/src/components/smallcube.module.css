@@ -44,11 +44,11 @@ body {
   
   .light::after {
     background-image: url(./../assets/light.gif);
-    background-size: 300px 300px;
+    background-size: 275px 275px;
     background-repeat: no-repeat;
     display: inline-block;
-    margin-top: -3rem;
-    margin-left: -3rem;
+    margin-top: -3.6rem;
+    margin-left: -2rem;
     width: 50vw; 
     height: 50vh;
     content:"";

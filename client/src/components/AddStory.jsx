@@ -125,13 +125,12 @@ const AddStory = ({ storiesStore, history }) => {
                   <SmallCube />
                 </div>
                 <div className={styles.paragraphText}>
-                  <p>Vat hieronder kort je verhaal samen.</p>
-                  <h2>Schrijf hier de synopsis.</h2>
+                  <h2>Schrijf hier je verhaal.</h2>
                   <textarea
                     type="text"
                     name="synopsys"
                     id="synopsys"
-                    placeholder="Typ hier je synopsis"
+                    placeholder="Typ hier je verhaal"
                     className={styles.textField}
                     ref={synopsysInput}
                     required
@@ -145,12 +144,13 @@ const AddStory = ({ storiesStore, history }) => {
                   <SmallCube />
                 </div>
                 <div className={styles.paragraphText}>
-                  <h2>Schrijf hier je verhaal.</h2>
+                <p>Vat hieronder kort je verhaal samen.</p>
+                  <h2>Schrijf hier de synopsis.</h2>
                   <textarea
                     type="text"
                     name="story"
                     id="story"
-                    placeholder="Typ hier je verhaal"
+                    placeholder="Typ hier je synopsis"
                     className={styles.textField}
                     ref={storyInput}
                     required

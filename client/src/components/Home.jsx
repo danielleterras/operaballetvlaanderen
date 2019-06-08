@@ -23,7 +23,7 @@ class FullpageWrapper extends Component {
           return (
             <>
               <div className="section">
-                <h1>Cubo</h1>
+                <h1 className={styles.maintitle}>Cubo</h1>
                 <Cube />
                 <div className={styles.scroll}>
                   <img src={mouse} alt="mouse" width="44" height="44" />
@@ -38,7 +38,7 @@ class FullpageWrapper extends Component {
                 <div className={styles.cube}>
                   <SmallCube />
                 </div>
-                <p style={{ display: "flex", justifyContent: "center" }}>
+                <p style={{ display: "flex", justifyContent: "center", marginTop: "100px" }}>
                   Ervaar op een unieke manier
                 </p>
               </div>
