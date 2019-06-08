@@ -49,10 +49,20 @@
 }
 @media screen and (max-width: 320px) {
   .button {
-    margin-right: 1rem;
-    margin-top: 0.5rem;
+    margin-left: 0rem;
+    margin-top: 0rem;
+    margin-right: 8rem;
+    margin-bottom: 0.5rem;
     width: 130px;
     float: left;
     text-align: center;
+}
+.sub {
+  color: #F72442;
+  font-weight: bold;
+  background: none;
+  border:none;
+  font-size: 12px;
+  margin-top: 0.75rem;
 }
 }

@@ -1,301 +1,282 @@
-h1 {
-    font-weight: normal;
-    font-size: 2.25rem;
-    text-transform: uppercase;
-  }
-  h2 {
-    font-weight: bold;
-    font-size: 2.25rem;
-  }
-  h3 {
-    font-size: 1.5rem;
-    font-weight: lighter;
-  }
-  
-  p {
-    font-size: 16px;
-  }
-  
-  .language {
-    font-weight: bold;
-  }
-  
-  .scroll {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  .submit {
-    color: white;
-    font-weight: bold;
-    background-color: #F72442;
-    border: none;
-    font-size: 1rem;
-    padding: .5rem 1rem;
-  }
-  
-  .submit:hover {
-    color: #F72442;
-    background-color: white;
-    transition: 0.5s;
-  }
-  
-  .inputField {
-    font-size: 1rem;
-    border: none;
-    border-bottom: #F72442 0.2rem solid;
-    background: none;
-    color: #fff;
-    width: 500px;
-  }
-  
-  .inputField::placeholder {
-    color: #F72442;
-  }
-  
-  .textField {
-    font-size: 1rem;
-    border: none;
-    background: #1A1A1A;;
-    color: white;
-    width: 700px;
-    height: 270px;
-  }
-  
-  .textField::placeholder {
-    color: white;
-  }
-  
-  .cube1{
-    background-image: url("../assets/step_1.svg");  
-    background-repeat: no-repeat;
-    background-position: center;
 
-    composes: cube1 from './home.module.css';
-  }
-  
-  .cube2{
-    background-image: url("../assets/step_2.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+ .cube1{
+  background-image: url("../assets/step_1.svg");  
+  background-repeat: no-repeat;
+  background-position: center;
 
-    composes: cube2 from './home.module.css';
-  }
-  
-  .cube3{
-    background-image: url("../assets/step_3.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+  composes: cube1 from './home.module.css';
+}
 
-    composes: cube3 from './home.module.css';
-  }
-  
-  .cube4{
-    background-image: url("../assets/step_4.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+.cube2{
+  background-image: url("../assets/step_2.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 
-    composes: cube4 from './home.module.css';
-  }
-  
-  .cube5{
-    background-image: url("../assets/step_5.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+  composes: cube2 from './home.module.css';
+}
 
-    composes: cube5 from './home.module.css';
-  }
-  
-  .cube6{
-    background-image: url("../assets/step_6.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+.cube3{
+  background-image: url("../assets/step_3.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 
-    composes: cube6 from './home.module.css';
-  }
+  composes: cube3 from './home.module.css';
+}
 
-  .cube7{
-    background-image: url("../assets/step_7.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+.cube4{
+  background-image: url("../assets/step_4.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 
-    composes: cube7 from './home.module.css';
-  }
+  composes: cube4 from './home.module.css';
+}
 
-  .flex {
-    composes: flex from "./home.module.css";
-  }
+.cube5{
+  background-image: url("../assets/step_5.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 
-  .back {
-      color: #F72442;
-      text-decoration: none;
-      margin-left: 13rem;
-  }
+  composes: cube5 from './home.module.css';
+}
 
-  .back::before {
-   content: url(https://img.icons8.com/ios/35/ffffff/circled-left.png);
-   padding: 44px;
-  }
+.cube6{
+  background-image: url("../assets/step_6.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 
-  .paragraph {
-    composes: paragraph from "./home.module.css";
-  }
+  composes: cube6 from './home.module.css';
+}
 
-  .paragraphText {
-    width: 700px;
-    z-index: 1;
-  }
+.cube7{
+  background-image: url("../assets/step_7.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 
-.sub {  
+  composes: cube7 from './home.module.css';
+}
+
+.back {
+  color: #F72442;
+  text-decoration: none;
+  font-size: 16px;
+  margin-left: 13rem;
+}
+
+.back::before {
+  content: url(https://img.icons8.com/ios/35/ffffff/circled-left.png);
+  padding: 44px;
+}
+
+.inputField {
+  font-size: 1rem;
+  border: none;
+  border-bottom: #F72442 0.2rem solid;
+  background: none;
+  color: #fff;
+  width: 730px;
+}
+
+.inputField::placeholder {
+  color: #F72442;
+}
+
+.textField {
+  font-size: 1rem;
+  border: none;
+  background: #1A1A1A;;
+  color: white;
+  width: 730px;
+  height: 270px;
+}
+
+.textField::placeholder {
+  color: white;
+}
+
+.paragraph {
+  width: 600px;
+  padding-right: 5rem;
+  margin-left: -20rem;
+}
+
+.flex {
+  composes: flex from "./home.module.css";
+}
+
+.sub {
   composes: sub from "./layout.module.css";
 }
 
-.navigation {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  flex-direction: column;
+.paragraphText {
+width: 735px;
 }
-
 
 @media screen and (max-width: 1500px) {
-  .paragraph {
-    width: 400px;
-  }
-  .inputField {
-    width: 400px;
-  }
-  .textField {
-    font-size: 1rem;
-    width: 600px;
-    margin-right: 300px;
-  }
-  .textField {
-    width: 700px;
-  }
-  .back {
-    margin-left: 0rem;
+.paragraph {
+  width: 400px;
+  margin-left: -70rem;
+  margin-top: 15rem;
+}
+.inputField {
+  width: 400px;
+}
+.textField {
+  font-size: 1rem;
+  width: 600px;
+  margin-right: 300px;
+}
+.paragraphText {
+  width: 650px;
+  padding-right: 5rem;
+  margin-left: -60rem;
+  margin-top: 20rem;
+}
+.textField {
+  width: 700px;
+}
+.back {
+  margin-left: 6rem;
 }
 
-  .paragraphText {
-    width: 650px;
-    padding-right: 5rem;
-    margin-left: -40rem;
-    margin-top: 20rem;
-  }
-  .textField{
-    height: 300px;
-  }
+}
+@media screen and (max-width: 1500px) {
+.paragraph {
+  width: 400px;
+  margin-left: -42rem;
+  margin-top: 15rem;
+}
+.paragraphText {
+  width: 650px;
+  padding-right: 5rem;
+  margin-left: -40rem;
+  margin-top: 20rem;
+}
+.textField{
+  height: 150px;
+}
+}
+/* @media screen and (max-width: 1024px) {
+.paragraph {
+  width: 400px;
+  margin-left: -50rem;
+  margin-top: 15rem;
+}
+.paragraphText {
+  width: 650px;
+  padding-right: 5rem;
+  margin-left: -40rem;
+  margin-top: 20rem;
 }
 
+} */
 
 @media screen and (max-width: 800px) {
-  .paragraph {
-    width: 350px;
-    margin-left: -40rem;
-  }
-  .paragraphText {
-    z-index: 1;
-    width: 600px;
-    margin-left: -20rem;
-  }
-  .textField{
-    width: 600px;
-  }
-
+.paragraph {
+  width: 350px;
+  margin-left: -40rem;
+}
+.paragraphText {
+  z-index: 1;
+  width: 600px;
+  margin-left: -20rem;
+}
+.textField{
+  width: 600px;
+}
 }
 
 @media screen and (max-width: 700px) {
-  .paragraphText {
-    width: 500px;
-    margin-left: -10rem;
-    margin-top: 15rem;
-  }
-  .textField{
-    width: 500px;
-  }
-  .paragraph {
-    width: 350px;
-    margin-left: -15rem;
-  }
+.paragraphText {
+  width: 500px;
+  margin-left: -10rem;
+  margin-top: 15rem;
+}
+.textField{
+  width: 500px;
+}
 }
 
 @media screen and (max-width: 600px) {
-  .paragraph {
-    width: 350px;
-  }
-  .paragraphText {
-    width: 400px;
-    margin-left: -30rem;
-    z-index: 1;
-  }
-  .textField{
-    width: 400px;
-  }
+.paragraph {
+  width: 350px;
+  margin-left: -20rem;
+}
+.paragraphText {
+  width: 400px;
+  margin-left: -30rem;
+  z-index: 1;
+}
+.textField{
+  width: 400px;
+}
 
 }
 @media screen and (max-width: 520px) {
-  .paragraph {
-    width: 350px;
-  }
-  .inputField {
-    width: 200px;
-  }
-  .paragraphText {
-    width: 350px;
-    margin-left: -20rem;
-    z-index: 1;
-  }
-  .back {
-    margin-left: 0rem;
+.paragraph {
+  width: 350px;
+  margin-left: -20rem;
+}
+.inputField {
+  width: 200px;
+}
+.paragraphText {
+  width: 350px;
+  margin-left: -20rem;
+  z-index: 1;
+}
+.back {
+  margin-left: 0rem;
 }
 }
 
 @media screen and (max-width: 420px) {
-  .paragraph {
-    width: 500px;
-  }
-  .paragraphText {
-    width: 300px;
-    margin-left: -14rem;
-    z-index: 1;
-    margin-top: 5rem;
-  }
-  .textField {
-    width: 300px;
-  }
+.paragraph {
+  margin-left: -12rem;
+  width: 500px;
+}
+.paragraphText {
+  width: 300px;
+  margin-left: -14rem;
+  z-index: 1;
+  margin-top: 5rem;
+}
+.textField {
+  width: 300px;
+}
 
 }
+
 @media screen and (max-width: 320px) {
-  .paragraph {
-    width: 500px;
-    margin-left: -10rem;
-  }
-  .paragraphText {
-    width: 200px;
-    margin-left: -20em;
-    margin-top: 5rem;
-  }
-  .textField {
-    width: 220px;
-    height: 160px;
-  }
-
+.paragraph {
+  margin-left: -12rem;
+  width: 500px;
+}
+.paragraphText {
+  width: 240px;
+  margin-left: -18em;
+  z-index: 1;
+  margin-top: 8rem;
+}
+.textField {
+  width: 230px;
+  height: 120px;
+  margin-bottom: 0.5rem;
+}
+h2 {
+  font-size: 1.5rem;
 }
 
+}
 /* @media screen and (max-width: 430px) {
-  .paragraphText {
-    width: 200px;
-    margin-left: -12rem;
-    z-index: 1;
-    margin-top: 5rem;
-  }
-  .textField {
-    width: 220px;
-    height: 200px;
-  }
+.paragraphText {
+  width: 200px;
+  margin-left: -12rem;
+  z-index: 1;
+  margin-top: 5rem;
+}
+.textField {
+  width: 220px;
+  height: 200px;
+}
 
 } */

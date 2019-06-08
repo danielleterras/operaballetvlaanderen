@@ -51,7 +51,7 @@ class FullpageWrapper extends Component {
                     <Link to={ROUTES.stories} className={layout.sub}>
                       Ontdek alle verhalen
                     </Link>
-                    <h2>
+                    <h2 className={styles.secondtitle}>
                       Wil jij opera en ballet op een unieke manier te ervaren?
                     </h2>
                     <p>
