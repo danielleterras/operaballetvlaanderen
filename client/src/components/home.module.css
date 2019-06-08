@@ -403,5 +403,9 @@ p {
     margin-left: 6rem;
     margin-top: -25rem;
   }
+  .maintitle{
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    }
 
 }
