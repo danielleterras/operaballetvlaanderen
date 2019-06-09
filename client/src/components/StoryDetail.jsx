@@ -9,19 +9,22 @@ import styles from "./stories.module.css";
 import layout from "./layout.module.css";
 
 const StoryDetail = ({ storiesStore, id }) => {
-  const { stories } = storiesStore;
-  console.log(id);
-  return (
-    <>
-      <div className={styles.navigation}>
-        <Link to={ROUTES.landing} className={styles.back} />
-        <Link to={ROUTES.addStory} className={layout.sub}>
-          Schijf je eigen verhaal
-        </Link>
-      </div>
-      <div className={styles.container}>
-        <ul className={styles.ul}>
-          {stories.map(story => (
+	const { stories } = storiesStore;
+	console.log(id);
+	const story = storiesStore.getById(id);
+	console.log(story);
+
+	return (
+		<>
+			<div className={styles.navigation}>
+				<Link to={ROUTES.landing} className={styles.back} />
+				<Link to={ROUTES.addStory} className={layout.sub}>
+					Schijf je eigen verhaal
+				</Link>
+			</div>
+			<div className={styles.container}>
+				<ul className={styles.ul}>
+					{/* {stories.map(story => (
             <article>
               <div className={styles.header}>
                 <h2>{story.title}</h2>
@@ -32,11 +35,11 @@ const StoryDetail = ({ storiesStore, id }) => {
                 <p>{story.story}</p>
               </div>
             </article>
-          ))}
-        </ul>
-      </div>
-    </>
-  );
+          ))} */}
+				</ul>
+			</div>
+		</>
+	);
 };
 
 export default inject(`storiesStore`)(observer(StoryDetail));
