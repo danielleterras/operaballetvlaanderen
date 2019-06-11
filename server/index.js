@@ -25,6 +25,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 require('./app/routes/stories.routes.js')(app);
+require('./app/routes/storiesTemplate.routes.js')(app);
 
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));

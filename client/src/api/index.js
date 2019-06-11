@@ -3,6 +3,14 @@ class Api {
 		this.entity = entity;
 	}
 
+	getAllTemplates = async () => {
+		console.log("testing");
+		const r = await fetch(`/api/${this.entity}`);
+		console.log(r);
+		console.log("helooooo");
+		return await r.json();
+	};
+
 	getById = async id => {
 		const r = await fetch(`/api/${this.entity}/${id}`);
 		if (r.status === 200) {
