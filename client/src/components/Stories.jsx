@@ -16,7 +16,7 @@ const Stories = ({ storiesStore }) => {
       <div className={styles.navigation}>
         <Link to={ROUTES.landing} className={styles.back} />
         <Link to={ROUTES.addStory} className={layout.sub}>
-          Schijf je eigen verhaal
+          Schrijf je eigen verhaal
         </Link>
       </div>
       <div className={styles.container}>
@@ -59,7 +59,7 @@ const Stories = ({ storiesStore }) => {
                 <p>Door {story.author}</p>
                 <p>{story.synopsys}</p>
 
-                <Link to={`story/${story.id}`} className={layout.sub}>
+                <Link to={`story/${story.id}`} className={styles.sublees}>
                   Lees meer...
                 </Link>
               </div>

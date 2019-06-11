@@ -57,6 +57,16 @@ ul {
     margin-top: 5rem;
 }
 
+.sublees {
+  color: #F72442;
+  font-weight: bold;
+  background: none;
+  border:none;
+  font-size: 16px;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
 
 @media screen and (max-width: 1024px) {
     .container {

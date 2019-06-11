@@ -20,8 +20,8 @@ exports.create = (req, res) => {
     title: req.body.title,
     genre: req.body.genre,
     author: req.body.author,
-    synopsys: req.body.synopsys,
     story: req.body.story,
+    synopsys: req.body.synopsys,
     votes: 0
   });
 

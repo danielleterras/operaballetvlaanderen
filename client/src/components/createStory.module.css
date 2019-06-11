@@ -101,6 +101,7 @@
 
   .flex {
     composes: flex from "./home.module.css";
+    height: 80vh;
   }
 
   .sub {
@@ -109,6 +110,10 @@
 
 .paragraphText {
   width: 735px;
+}
+
+.scroll {
+  composes: scroll from './home.module.css';
 }
 
 @media screen and (max-width: 1500px) {
@@ -155,6 +160,12 @@
     height: 150px;
   }
 }
+
+.button {
+  composes: button from './layout.module.css';
+  float: right;
+}
+
 /* @media screen and (max-width: 1024px) {
   .paragraph {
     width: 400px;

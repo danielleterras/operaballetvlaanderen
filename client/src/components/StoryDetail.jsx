@@ -9,7 +9,7 @@ import styles from "./stories.module.css";
 import layout from "./layout.module.css";
 
 const StoryDetail = ({ storiesStore, id }) => {
-	const { stories } = storiesStore;
+	const { stories, updateVotes } = storiesStore;
 	console.log(id);
 	const story = stories.find(check => check.id === id);
 	console.log(story);
@@ -17,17 +17,48 @@ const StoryDetail = ({ storiesStore, id }) => {
 	return (
 		<>
 			<div className={styles.navigation}>
-				<Link to={ROUTES.landing} className={styles.back} />
+				<Link to={ROUTES.stories} className={styles.back} />
 				<Link to={ROUTES.addStory} className={layout.sub}>
-					Schijf je eigen verhaal
+					Schrijf je eigen verhaal
 				</Link>
 			</div>
+			 
 			<div className={styles.container}>
 				<ul className={styles.ul}>
 					<article>
 						<div className={styles.header}>
 							<h2>{story.title}</h2>
+							<span className={styles.votes}>
+                  {story.like ? (
+                    <button
+                      onClick={() => updateVotes(story)}
+                      className={styles.heart}
+                    >
+                      <img
+                        src={filled_heart}
+                        alt="heart"
+                        width="20"
+                        height="20"
+                      />
+                    </button>
+                  ) : (
+                    <button
+                      onClick={() => updateVotes(story)}
+                      className={styles.heart}
+                    >
+                      <img
+                        src={outline_heart}
+                        alt="heart"
+                        width="20"
+                        height="20"
+                      />
+                    </button>
+                  )}
+
+                  {story.votes}
+                </span>
 						</div>
+						
 						<div className={styles.template}>
 							<p>Door {story.author}</p>
 							<p>{story.synopsys}</p>

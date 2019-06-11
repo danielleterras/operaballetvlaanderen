@@ -22,25 +22,30 @@ class FullpageWrapper extends Component {
         render={() => {
           return (
             <>
-              <div className="section">
+              {/* <div className="section">
                 <h1 className={styles.maintitle}>Cubo</h1>
                 <Cube />
                 <div className={styles.scroll}>
                   <img src={mouse} alt="mouse" width="44" height="44" />
                   <p>Scroll naar beneden om te ontdekken</p>
                 </div>
-              </div>
+              </div> */}
               <div className="section">
                 <h1 className={styles.title}>
-                  <span className={styles.size}>Ontdek</span>{" "}
-                  <span className={styles.bold}>Cubo</span>
+                  Cubo
+                  {/* <span className={styles.bold}>Cubo</span> */}
                 </h1>
-                <div className={styles.cube}>
-                  <SmallCube />
-                </div>
-                <p style={{ display: "flex", justifyContent: "center", marginTop: "100px" }}>
+                <p className={styles.slogan}>
                   Ervaar op een unieke manier
                 </p>
+                <div className={styles.cube}>
+                  <Cube />
+                </div>
+                
+                <div className={styles.scroll}>
+                  <img src={mouse} alt="mouse" width="44" height="44" />
+                  <p>Scroll naar beneden om te ontdekken</p>
+                </div>
               </div>
               <div className="section">
                 <div className={styles.flex}>
@@ -48,9 +53,6 @@ class FullpageWrapper extends Component {
                     <SmallCube />
                   </div>
                   <div className={styles.paragraph}>
-                    <Link to={ROUTES.stories} className={layout.sub}>
-                      Ontdek alle verhalen
-                    </Link>
                     <h2 className={styles.secondtitle}>
                       Wil jij opera en ballet op een unieke manier te ervaren?
                     </h2>
@@ -69,7 +71,28 @@ class FullpageWrapper extends Component {
                       introductie over de voorstelling die je gaat bijwonen.
                       Hierna neem je Cubo mee in de zaal en ervaar je de show
                       met een <span className={styles.bold}>extra zintuig</span>{" "}
-                      in jouw handen. Na de show kan je feedback of jouw verhaal
+                      in jouw handen. 
+                    </p>
+                    <p>
+                      Eén van deze verhalen zal worden omgezet tot een korte
+                      ballet of opera voorstelling.{" "}
+                      <span className={styles.bold}>Deel jouw verhaal</span> en
+                      laat je horen, net zoals Opera Ballet Vlaanderen.
+                    </p>
+                  </div>
+                </div>
+                </div>
+                <div className="section">
+                <div className={styles.flex}>
+                  <div className={styles.cube2}>
+                    <SmallCube />
+                  </div>
+                  <div className={styles.paragraph}>
+                    <h2 className={styles.secondtitle}>
+                      Deel jouw verhaal met Opera Ballet Vlaanderen
+                    </h2>
+                    <p>
+                     Na de show kan je feedback of jouw verhaal
                       meedelen aan Cubo.
                     </p>
                     <p>
@@ -78,17 +101,22 @@ class FullpageWrapper extends Component {
                       <span className={styles.bold}>Deel jouw verhaal</span> en
                       laat je horen, net zoals Opera Ballet Vlaanderen.
                     </p>
-                    <div className={styles.navigation}>
-                      <Link to={ROUTES.createStory} className={layout.button}>
+                    <div className={styles.nav}>
+                      <Link to={ROUTES.createStory} className={styles.navigation}>
                         Creëer je verhaal
                       </Link>
                       <Link to={ROUTES.addStory} className={layout.button}>
-                        Schijf je verhaal
+                        Schrijf je verhaal
                       </Link>
                     </div>
+                    <Link to={ROUTES.stories} className={layout.sub}>
+                      Ontdek alle verhalen
+                    </Link>
                   </div>
                 </div>
-              </div>
+                </div>
+                
+                
             </>
           );
         }}

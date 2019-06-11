@@ -20,8 +20,8 @@ class StoriesStore {
 			data.genre,
 			data.author,
 			data.title,
-			data.synopsys,
-			data.story
+			data.story,
+			data.synopsys
 		);
 		newStory.updateFromServer(data);
 		this.stories.push(newStory);

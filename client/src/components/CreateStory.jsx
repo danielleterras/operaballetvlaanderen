@@ -11,6 +11,7 @@ import { ROUTES } from "../constants";
 
 import cubes from "./../assets/Cubes.gif";
 import cube_small from "./../assets/cube_small.svg";
+import mouse from "./../assets/scroll_icon.svg";
 
 import styles from "./createStory.module.css";
 import layout from "./layout.module.css";
@@ -63,6 +64,10 @@ const CreateStory = ({ storiesStore }) => {
                   />
                 </div>
               </div>
+              <div className={styles.scroll}>
+                  <img src={mouse} alt="mouse" width="44" height="44" />
+                  <p>Scroll naar beneden om te ontdekken</p>
+                </div>  
             </div>
             <div className="section">
               <div className={styles.flex}>
@@ -148,7 +153,7 @@ const CreateStory = ({ storiesStore }) => {
                   <Link to={ROUTES.story} className={layout.sub}>
                     <input
                       type="submit"
-                      className={layout.button}
+                      className={styles.button}
                       value="Creëer mijn verhaal"
                     />
                   </Link>

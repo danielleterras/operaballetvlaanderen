@@ -67,6 +67,16 @@
   padding: 44px;
 }
 
+.navigation {
+  display: flex;
+  flex-direction: column;
+  float: right;
+}
+
+.scroll {
+  composes: scroll from './home.module.css';
+}
+
 .inputField {
   font-size: 1rem;
   border: none;
@@ -101,6 +111,7 @@
 
 .flex {
   composes: flex from "./home.module.css";
+  height: 80vh;
 }
 
 .sub {

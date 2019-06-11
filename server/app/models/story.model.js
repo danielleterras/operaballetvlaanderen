@@ -5,8 +5,8 @@ const StorySchema = mongoose.Schema(
     title: String,
     genre: String,
     author: String,
-    synopsys: String,
     story: String,
+    synopsys: String,
     votes: Number
   },
   {

@@ -12,6 +12,7 @@ import SmallCube from "./SmallCube";
 
 import cubes from "./../assets/Cubes.gif";
 import cube_small from "./../assets/cube_small.svg";
+import mouse from "./../assets/scroll_icon.svg";
 
 import styles from "./addStory.module.css";
 import layout from "./layout.module.css";
@@ -25,8 +26,8 @@ const AddStory = ({ storiesStore, history }) => {
   const genreInput = React.createRef();
   const authorInput = React.createRef();
   const titleInput = React.createRef();
-  const synopsysInput = React.createRef();
   const storyInput = React.createRef();
+  const synopsysInput = React.createRef();
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -34,16 +35,16 @@ const AddStory = ({ storiesStore, history }) => {
       title: titleInput.current.value,
       genre: genreInput.current.value,
       author: authorInput.current.value,
-      synopsys: synopsysInput.current.value,
       story: storyInput.current.value,
+      synopsys: synopsysInput.current.value,
       redirect
     });
 
     titleInput.current.value = "";
     genreInput.current.value = "";
     authorInput.current.value = "";
-    synopsysInput.current.value = "";
     storyInput.current.value = "";
+    synopsysInput.current.value = "";
   };
 
   return (
@@ -73,7 +74,11 @@ const AddStory = ({ storiesStore, history }) => {
                   />
                 </div>
               </div>
-            </div>
+              <div className={styles.scroll}>
+                  <img src={mouse} alt="mouse" width="44" height="44" />
+                  <p>Scroll naar beneden om te ontdekken</p>
+                </div>            
+              </div>
             <div className="section">
               <div className={styles.flex}>
                 <div className={styles.cube4}>
@@ -132,7 +137,7 @@ const AddStory = ({ storiesStore, history }) => {
                     id="synopsys"
                     placeholder="Typ hier je verhaal"
                     className={styles.textField}
-                    ref={synopsysInput}
+                    ref={storyInput}
                     required
                   />
                 </div>
@@ -152,7 +157,7 @@ const AddStory = ({ storiesStore, history }) => {
                     id="story"
                     placeholder="Typ hier je synopsis"
                     className={styles.textField}
-                    ref={storyInput}
+                    ref={synopsysInput}
                     required
                   />
                   <div className={styles.navigation}>
@@ -161,9 +166,9 @@ const AddStory = ({ storiesStore, history }) => {
                       className={layout.button}
                       value="Deel mijn verhaal"
                     />
-                    <Link to={ROUTES.stories} className={layout.sub}>
+                    {/* <Link to={ROUTES.stories} className={layout.sub}>
                       Ontdek alle verhalen
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </div>

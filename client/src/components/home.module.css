@@ -32,9 +32,14 @@ p {
 }
 
 .navigation {
-  margin-top: 3rem;
+  margin: 0;
+  composes: button from "./layout.module.css";
 }
 
+.nav {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
 
 .inputField {
   font-size: 1rem;
@@ -155,16 +160,21 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 100px;
+  margin-top: 4rem;
+  font-size: 50px;
+  letter-spacing: 10px;
+}
+.slogan {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+
 }
 
 .bold {
   font-weight: bold;
 }
 
-.size {
-  font-size: 24px;
-}
 
 .sub {
   composes: sub from "./layout.module.css";
@@ -322,11 +332,12 @@ p {
     height: 300px;
     width:  300px;
     margin-top: -25rem;
+    margin-bottom: 10rem;
     }
 }
 
-@media screen and (max-width: 1000px) {
-  .paragraph {
+@media screen and (max-width: 1100px) {
+  /* .paragraph {
     width: 700px;
     margin-left: -40rem;
     margin-top: 15rem;
@@ -364,15 +375,15 @@ p {
     margin-top: -25rem;
   }
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 520px) { */
   .paragraph {
-    width: 400px;
-    margin-left: -25rem;
+    width: 600px;
+    margin-left: -40rem;
     height:330px;
-    margin-top: 20rem;
+    margin-top: 10rem;
   } 
   .cube1, .cube2, .cube3, .cube4, .cube5, .cube6, .cube7 {
-    margin-left: 5rem;
+    margin-left: 15rem;
     margin-top: -25rem;
   }
 }
@@ -392,6 +403,13 @@ p {
     margin-left: 10rem;
     margin-top: -37rem;
   }
+}
+
+@media screen and (max-width: 800px) {
+  .paragraph {
+  margin-left: -25rem;
+  margin-top: 12rem;
+  } 
 }
 @media screen and (max-width: 320px) {
   .paragraph {
