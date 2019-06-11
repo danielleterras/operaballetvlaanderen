@@ -11,7 +11,7 @@ import layout from "./layout.module.css";
 const StoryDetail = ({ storiesStore, id }) => {
 	const { stories } = storiesStore;
 	console.log(id);
-	const story = storiesStore.getById(id);
+	const story = stories.find(check => check.id === id);
 	console.log(story);
 
 	return (
@@ -24,18 +24,16 @@ const StoryDetail = ({ storiesStore, id }) => {
 			</div>
 			<div className={styles.container}>
 				<ul className={styles.ul}>
-					{/* {stories.map(story => (
-            <article>
-              <div className={styles.header}>
-                <h2>{story.title}</h2>
-              </div>
-              <div className={styles.template}>
-                <p>Door {story.author}</p>
-                <p>{story.synopsys}</p>
-                <p>{story.story}</p>
-              </div>
-            </article>
-          ))} */}
+					<article>
+						<div className={styles.header}>
+							<h2>{story.title}</h2>
+						</div>
+						<div className={styles.template}>
+							<p>Door {story.author}</p>
+							<p>{story.synopsys}</p>
+							<p>{story.story}</p>
+						</div>
+					</article>
 				</ul>
 			</div>
 		</>
