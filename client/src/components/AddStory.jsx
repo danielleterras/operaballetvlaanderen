@@ -1,7 +1,7 @@
 import React from "react";
 import "fullpage.js/vendors/scrolloverflow";
 import ReactFullpage from "@fullpage/react-fullpage";
-import { PropTypes, inject } from "mobx-react";
+import { PropTypes, inject, observer } from "mobx-react";
 
 import { withRouter } from "react-router-dom";
 
@@ -36,6 +36,8 @@ const AddStory = ({ storiesStore, history }) => {
       synopsys: synopsysInput.current.value,
       redirect
     });
+
+    console.log(redirect);
 
     titleInput.current.value = "";
     genreInput.current.value = "";
@@ -158,13 +160,11 @@ const AddStory = ({ storiesStore, history }) => {
                     required
                   />
                   <div className={styles.navigation}>
-                    <Link to={ROUTES.stories}>
-                      <input
-                        type="submit"
-                        className={layout.button}
-                        value="Deel mijn verhaal"
-                      />
-                    </Link>
+                    <input
+                      type="submit"
+                      className={layout.button}
+                      value="Deel mijn verhaal"
+                    />
                   </div>
                 </div>
               </div>
@@ -180,4 +180,4 @@ AddStory.propTypes = {
   storiesStore: PropTypes.observableObject.isRequired
 };
 
-export default inject(`storiesStore`)(withRouter(AddStory));
+export default inject(`storiesStore`)(withRouter(observer(AddStory)));
