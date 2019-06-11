@@ -20,37 +20,35 @@ const Stories = ({ storiesStore }) => {
         </Link>
       </div>
       <div className={styles.container}>
+        <article className={styles.intro}>
+          <h2>Deel jouw verhaal met Opera Ballet Vlaanderen</h2>
+          <p>
+            Opera Ballet Vlaanderen is op zoek naar jou stem. Jou verhaal is
+            belangrijk voor hen. Hier vind u alle verhalen terug waarop kan
+            gestemd worden door op het "hartje" te klikken. De eerstvolgende
+            deadline is 31 december 2019. Daarna wordt het verhaal met de meeste
+            stemmen binnen één bepaald genre dat door Opera Ballet Vlaanderen
+            wordt beslist uitgewerkt. Op deze manier kunt u Opera Ballet
+            Vlaanderen opnieuw op een unieke manier beleven.
+          </p>
+        </article>
         <ul className={styles.ul}>
           {stories.map(story => (
-            <article key={story.id}>
+            <article key={story.id} className={styles.article}>
               <div className={styles.header}>
                 <h2>{story.title}</h2>
                 <span className={styles.votes}>
-                  {story.like ? (
-                    <button
-                      onClick={() => updateVotes(story)}
-                      className={styles.heart}
-                    >
-                      <img
-                        src={filled_heart}
-                        alt="heart"
-                        width="20"
-                        height="20"
-                      />
-                    </button>
-                  ) : (
-                    <button
-                      onClick={() => updateVotes(story)}
-                      className={styles.heart}
-                    >
-                      <img
-                        src={outline_heart}
-                        alt="heart"
-                        width="20"
-                        height="20"
-                      />
-                    </button>
-                  )}
+                  <button
+                    onClick={() => updateVotes(story)}
+                    className={styles.heart}
+                  >
+                    <img
+                      src={outline_heart}
+                      alt="heart"
+                      width="20"
+                      height="20"
+                    />
+                  </button>
 
                   {story.votes}
                 </span>
@@ -58,10 +56,14 @@ const Stories = ({ storiesStore }) => {
               <div className={styles.template}>
                 <p>Door {story.author}</p>
                 <p>{story.synopsys}</p>
-
-                <Link to={`story/${story.id}`} className={styles.sublees}>
-                  Lees meer...
-                </Link>
+                <div
+                  style={{ display: "flex", justifyContent: "space-between" }}
+                >
+                  <Link to={`story/${story.id}`} className={styles.sublees}>
+                    Lees meer...
+                  </Link>
+                  <span className={styles.genre}>{story.genre}</span>{" "}
+                </div>
               </div>
             </article>
           ))}

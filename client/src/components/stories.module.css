@@ -20,6 +20,14 @@ ul {
     align-items: center;
 }
 
+.article {
+    margin-bottom: 2rem;
+}
+
+.intro {
+    text-align: left;
+}
+
 .template {
     background-color: #1A1A1A;
     margin-top: -1rem;
@@ -31,7 +39,15 @@ ul {
     border-radius: 100%;
     width: 35px;
     height: 35px;
-    margin-right: .5rem
+    margin-right: .5rem;
+}
+
+.genre {
+    font-style: italic;
+    color: white;
+    background-color: #4F152D;
+    padding: 0.5rem;
+    font-size: 16px;
 }
 
 .votes {

@@ -1,14 +1,12 @@
 import React from "react";
-import { inject, observer, PropTypes } from "mobx-react";
+import { observer } from "mobx-react";
 import { Link } from "react-router-dom";
 import { ROUTES } from "../constants";
 
 import styles from "./story.module.css";
 import layout from "./layout.module.css";
 
-const Stories = ({ storiesStore }) => {
-  const { stories } = storiesStore;
-
+const Stories = () => {
   return (
     <div className="section">
       <div className={styles.storyparagraph}>
@@ -31,8 +29,4 @@ const Stories = ({ storiesStore }) => {
   );
 };
 
-Stories.propTypes = {
-  storiesStore: PropTypes.observableObject.isRequired
-};
-
-export default inject("storiesStore")(observer(Stories));
+export default observer(Stories);

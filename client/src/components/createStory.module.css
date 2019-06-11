@@ -5,6 +5,7 @@
     background-position: center;
 
     composes: cube1 from './home.module.css';
+    z-index: 0;
   }
   
   .cube2{
@@ -13,6 +14,7 @@
     background-position: center;
 
     composes: cube2 from './home.module.css';
+    z-index: 0;
   }
   
   .cube3{
@@ -21,6 +23,7 @@
     background-position: center;
 
     composes: cube3 from './home.module.css';
+    z-index: 0;
   }
   
   .cube4{
@@ -29,6 +32,7 @@
     background-position: center;
 
     composes: cube4 from './home.module.css';
+    z-index: 0;
   }
   
   .cube5{
@@ -37,6 +41,7 @@
     background-position: center;
 
     composes: cube5 from './home.module.css';
+    z-index: 0;
   }
   
   .cube6{
@@ -45,6 +50,7 @@
     background-position: center;
 
     composes: cube6 from './home.module.css';
+    z-index: 0;
   }
 
   .cube7{
@@ -53,6 +59,7 @@
     background-position: center;
 
     composes: cube7 from './home.module.css';
+    z-index: 0;
   }
 
 .back {
@@ -74,6 +81,7 @@
     background: none;
     color: #fff;
     width: 730px;
+    z-index: 1;
   }
   
   .inputField::placeholder {
@@ -87,6 +95,7 @@
     color: white;
     width: 730px;
     height: 270px;
+    z-index: 1;
   }
   
   .textField::placeholder {
@@ -97,6 +106,7 @@
     width: 600px;
     padding-right: 5rem;
     margin-left: -20rem;
+    z-index: 1;
   }
 
   .flex {
@@ -110,6 +120,7 @@
 
 .paragraphText {
   width: 735px;
+  z-index: 1;
 }
 
 .scroll {
