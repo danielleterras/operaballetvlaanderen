@@ -9,9 +9,6 @@ import { Link } from "react-router-dom";
 import { ROUTES } from "../constants";
 
 import SmallCube from "./SmallCube";
-
-import cubes from "./../assets/Cubes.gif";
-import cube_small from "./../assets/cube_small.svg";
 import mouse from "./../assets/scroll_icon.svg";
 
 import styles from "./addStory.module.css";
@@ -75,10 +72,10 @@ const AddStory = ({ storiesStore, history }) => {
                 </div>
               </div>
               <div className={styles.scroll}>
-                  <img src={mouse} alt="mouse" width="44" height="44" />
-                  <p>Scroll naar beneden om te ontdekken</p>
-                </div>            
+                <img src={mouse} alt="mouse" width="44" height="44" />
+                <p>Scroll naar beneden om te ontdekken</p>
               </div>
+            </div>
             <div className="section">
               <div className={styles.flex}>
                 <div className={styles.cube4}>
@@ -149,7 +146,7 @@ const AddStory = ({ storiesStore, history }) => {
                   <SmallCube />
                 </div>
                 <div className={styles.paragraphText}>
-                <p>Vat hieronder kort je verhaal samen.</p>
+                  <p>Vat hieronder kort je verhaal samen.</p>
                   <h2>Schrijf hier de synopsis.</h2>
                   <textarea
                     type="text"
@@ -161,14 +158,13 @@ const AddStory = ({ storiesStore, history }) => {
                     required
                   />
                   <div className={styles.navigation}>
-                    <input
-                      type="submit"
-                      className={layout.button}
-                      value="Deel mijn verhaal"
-                    />
-                    {/* <Link to={ROUTES.stories} className={layout.sub}>
-                      Ontdek alle verhalen
-                    </Link> */}
+                    <Link to={ROUTES.stories}>
+                      <input
+                        type="submit"
+                        className={layout.button}
+                        value="Deel mijn verhaal"
+                      />
+                    </Link>
                   </div>
                 </div>
               </div>

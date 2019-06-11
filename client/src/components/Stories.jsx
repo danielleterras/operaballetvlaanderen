@@ -22,35 +22,24 @@ const Stories = ({ storiesStore }) => {
       <div className={styles.container}>
         <ul className={styles.ul}>
           {stories.map(story => (
-            <article key={story.id}>
+            <article key={story.id} className={styles.article}>
               <div className={styles.header}>
-                <h2>{story.title}</h2>
+                <div>
+                  <h2>{story.title}</h2>
+                  <p className={styles.genre}>{story.genre}</p>
+                </div>
                 <span className={styles.votes}>
-                  {story.like ? (
-                    <button
-                      onClick={() => updateVotes(story)}
-                      className={styles.heart}
-                    >
-                      <img
-                        src={filled_heart}
-                        alt="heart"
-                        width="20"
-                        height="20"
-                      />
-                    </button>
-                  ) : (
-                    <button
-                      onClick={() => updateVotes(story)}
-                      className={styles.heart}
-                    >
-                      <img
-                        src={outline_heart}
-                        alt="heart"
-                        width="20"
-                        height="20"
-                      />
-                    </button>
-                  )}
+                  <button
+                    onClick={() => updateVotes(story)}
+                    className={styles.heart}
+                  >
+                    <img
+                      src={outline_heart}
+                      alt="heart"
+                      width="20"
+                      height="20"
+                    />
+                  </button>
 
                   {story.votes}
                 </span>
@@ -58,7 +47,6 @@ const Stories = ({ storiesStore }) => {
               <div className={styles.template}>
                 <p>Door {story.author}</p>
                 <p>{story.synopsys}</p>
-
                 <Link to={`story/${story.id}`} className={styles.sublees}>
                   Lees meer...
                 </Link>
