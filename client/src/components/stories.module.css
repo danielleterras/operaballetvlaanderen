@@ -83,6 +83,11 @@ ul {
   margin-top: 1rem;
 }
 
+.link {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 @media screen and (max-width: 1024px) {
     .container {

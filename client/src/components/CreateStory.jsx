@@ -13,26 +13,35 @@ import mouse from "./../assets/scroll_icon.svg";
 import styles from "./createStory.module.css";
 import layout from "./layout.module.css";
 
-const CreateStory = ({ storiesStore, storiesTemplateStore }) => {
+const CreateStory = ({ storiesStore, history }) => {
+  const redirect = id => {
+    history.push(`/story`);
+  };
+
   const genreInput = React.createRef();
-
   const authorInput = React.createRef();
-
   const titleInput = React.createRef();
   const synopsysInput = React.createRef();
+  const personageInput = React.createRef();
 
   const handleSubmit = e => {
     e.preventDefault();
-    storiesStore.addStory({
-      title: titleInput.current.value,
-      genre: genreInput.current.value,
-      synopsys: synopsysInput.current.value,
-      author: authorInput.current.value
-    });
+    storiesStore
+      .addStory({
+        title: titleInput.current.value,
+        genre: genreInput.current.value,
+        synopsys: synopsysInput.current.value,
+        author: authorInput.current.value,
+        personage: personageInput.current.value
+      })
+      .then(story => {
+        redirect(story);
+      });
     titleInput.current.value = "";
     genreInput.current.value = "";
     synopsysInput.current.value = "";
     authorInput.current.value = "";
+    personageInput.current.value = "";
   };
 
   return (
@@ -78,6 +87,7 @@ const CreateStory = ({ storiesStore, storiesTemplateStore }) => {
                     type="text"
                     placeholder="Typ hier je personage"
                     className={styles.inputField}
+                    ref={personageInput}
                   />
                   <p>*Koningin, weduwe, prins detective, wetenschapper,...</p>
                 </div>
@@ -138,7 +148,6 @@ const CreateStory = ({ storiesStore, storiesTemplateStore }) => {
                     gekozen (stap 06).
                   </p>
                   <h2>Vertel een leuke anekdote over jezelf.</h2>
-
                   <textarea
                     type="text"
                     name="synopsys"
@@ -147,13 +156,11 @@ const CreateStory = ({ storiesStore, storiesTemplateStore }) => {
                     className={styles.textField}
                     ref={synopsysInput}
                   />
-                  <Link to={ROUTES.story} className={layout.sub}>
-                    <input
-                      type="submit"
-                      className={styles.button}
-                      value="Creëer mijn verhaal"
-                    />
-                  </Link>
+                  <input
+                    type="submit"
+                    className={styles.button}
+                    value="Creëer mijn verhaal"
+                  />
                 </div>
               </div>
             </div>
@@ -165,8 +172,7 @@ const CreateStory = ({ storiesStore, storiesTemplateStore }) => {
 };
 
 CreateStory.propTypes = {
-  storiesStore: PropTypes.observableObject.isRequired,
-  storiesTemplateStore: PropTypes.observableObject.isRequired
+  storiesStore: PropTypes.observableObject.isRequired
 };
 
-export default inject(`storiesStore`, `storiesTemplateStore`)(CreateStory);
+export default inject(`storiesStore`)(CreateStory);

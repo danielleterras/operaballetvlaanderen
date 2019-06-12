@@ -13,16 +13,15 @@ exports.create = (req, res) => {
   if (!req.body.synopsys) {
     return res.status(500).send({err: 'Synopsys can not be empty'});
   }
-  if (!req.body.story) {
-    return res.status(500).send({err: 'Story can not be empty'});
-  }
+
   const story = new Story({
     title: req.body.title,
     genre: req.body.genre,
     author: req.body.author,
     story: req.body.story,
     synopsys: req.body.synopsys,
-    votes: 0
+    votes: 0,
+    personage: req.body.personage
   });
 
   story

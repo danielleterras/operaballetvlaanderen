@@ -7,7 +7,8 @@ const StorySchema = mongoose.Schema(
     author: String,
     story: String,
     synopsys: String,
-    votes: Number
+    votes: Number,
+    personage: String
   },
   {
     timestamps: true

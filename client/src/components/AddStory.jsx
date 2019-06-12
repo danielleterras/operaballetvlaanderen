@@ -16,8 +16,7 @@ import layout from "./layout.module.css";
 
 const AddStory = ({ storiesStore, history }) => {
   const redirect = id => {
-    console.log(`State updated`);
-    history.push(`/stories/${id}`);
+    history.push(`/story/${id}`);
   };
 
   const genreInput = React.createRef();
