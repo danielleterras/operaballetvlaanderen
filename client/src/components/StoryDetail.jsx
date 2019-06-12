@@ -10,7 +10,6 @@ import styles from "./stories.module.css";
 import layout from "./layout.module.css";
 
 import store from "./../store";
-import { stringify } from "querystring";
 
 class StoryDetail extends Component {
 	constructor(props) {
@@ -23,7 +22,6 @@ class StoryDetail extends Component {
 	};
 	render() {
 		const { stories } = store.storiesStore;
-		const { buttonHart } = this.state;
 
 		const story = stories.find(check => check.id === this.props.id);
 		return (
