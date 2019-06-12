@@ -10,6 +10,7 @@ import styles from "./stories.module.css";
 import layout from "./layout.module.css";
 
 import store from "./../store";
+import { stringify } from "querystring";
 
 class StoryDetail extends Component {
 	constructor(props) {
@@ -44,7 +45,7 @@ class StoryDetail extends Component {
 										onClick={() => this.clickedButton(story)}
 										className={styles.heart}
 									>
-										{buttonHart ? (
+										{story.voted ? (
 											<img
 												src={filled_heart}
 												alt="heart"
