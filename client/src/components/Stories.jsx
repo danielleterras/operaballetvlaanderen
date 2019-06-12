@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { ROUTES } from "../constants";
 
 import outline_heart from "./../assets/stroke_heart.svg";
-import filled_heart from "./../assets/filled_heart.svg";
 import styles from "./stories.module.css";
 import layout from "./layout.module.css";
 

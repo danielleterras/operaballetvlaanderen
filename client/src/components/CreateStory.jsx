@@ -13,7 +13,7 @@ import mouse from "./../assets/scroll_icon.svg";
 import styles from "./createStory.module.css";
 import layout from "./layout.module.css";
 
-const CreateStory = ({ storiesStore }) => {
+const CreateStory = ({ storiesStore, storiesTemplateStore }) => {
   const genreInput = React.createRef();
 
   const authorInput = React.createRef();
@@ -165,7 +165,8 @@ const CreateStory = ({ storiesStore }) => {
 };
 
 CreateStory.propTypes = {
-  storiesStore: PropTypes.observableObject.isRequired
+  storiesStore: PropTypes.observableObject.isRequired,
+  storiesTemplateStore: PropTypes.observableObject.isRequired
 };
 
-export default inject(`storiesStore`)(CreateStory);
+export default inject(`storiesStore`, `storiesTemplateStore`)(CreateStory);

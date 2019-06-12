@@ -28,14 +28,17 @@ const AddStory = ({ storiesStore, history }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    storiesStore.addStory({
-      title: titleInput.current.value,
-      genre: genreInput.current.value,
-      author: authorInput.current.value,
-      story: storyInput.current.value,
-      synopsys: synopsysInput.current.value,
-      redirect
-    });
+    storiesStore
+      .addStory({
+        title: titleInput.current.value,
+        genre: genreInput.current.value,
+        author: authorInput.current.value,
+        story: storyInput.current.value,
+        synopsys: synopsysInput.current.value
+      })
+      .then(story => {
+        redirect(story.id);
+      });
 
     console.log(redirect);
 

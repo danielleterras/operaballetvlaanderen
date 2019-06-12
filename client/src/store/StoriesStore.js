@@ -14,7 +14,7 @@ class StoriesStore {
     this.api.getAll().then(d => d.forEach(this._addStory));
   }
 
-  addStory = data => {
+  addStory = async data => {
     console.log(data.story);
     const newStory = new Story(
       data.genre,
@@ -26,9 +26,10 @@ class StoriesStore {
     newStory.updateFromServer(data);
     this.stories.push(newStory);
     console.log(newStory);
-    this.api
-      .create(newStory)
-      .then(storyValues => newStory.updateFromServer(storyValues));
+    const storyValues = await this.api.create(newStory);
+    newStory.updateFromServer(storyValues);
+
+    return newStory;
   };
 
   _addStory = values => {

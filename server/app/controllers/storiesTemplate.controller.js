@@ -18,10 +18,8 @@ exports.create = (req, res) => {
     });
 };
 exports.findAll = async (req, res) => {
-  console.log('test');
   try {
     const storiesTemplates = await StoryTemplate.find();
-    console.log(storiesTemplates);
     res.send(storiesTemplates);
   } catch (err) {
     res.status(500).send({err: err.story || 'Error'});

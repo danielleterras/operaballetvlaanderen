@@ -74,18 +74,37 @@ class FullpageWrapper extends Component {
                     <SmallCube />
                   </div>
                   <div className={styles.paragraph}>
-                    <h2 className={styles.secondtitle}>
-                      Deel jouw verhaal met Opera Ballet Vlaanderen
-                    </h2>
+                    <h2 className={styles.secondtitle}>Deel jouw verhaal</h2>
                     <p>
-                      Na de show kan je feedback of jouw verhaal meedelen aan
-                      Cubo.
+                      Omdat wij, Opera Ballet Vlaanderen, onze verhalen naar
+                      buiten brengen willen wij graag ook jouw verhalen te weten
+                      komen.
                     </p>
                     <p>
-                      Eén van deze verhalen zal worden omgezet tot een korte
-                      ballet of opera voorstelling.{" "}
-                      <span className={styles.bold}>Deel jouw verhaal</span> en
-                      laat je horen, net zoals Opera Ballet Vlaanderen.
+                      Na de voorstelling kan je feedback meedelen aan Cubo door
+                      het tegen hem te vertellen, of je kan ook een eigen
+                      verhaal meedelen.
+                    </p>
+                    <p>
+                      Hier op deze website is het ook mogelijk om een verhaal te
+                      schrijven. Wij voorzien twee opties om een verhaal te
+                      schrijven: Schrijf je verhaal: schrijf zelf je verhaal
+                      Creëer je verhaal: heb je geen inspiratie voor een
+                      volledig verhaal te schrijven? Bij deze optie geef je een
+                      paar stukjes input mee, en hiermee maken wij een verhaal
+                      voor jou.
+                    </p>
+                    <p>
+                      <span className={styles.bold}>Doel?</span> Uiteindelijk
+                      worden alle verhalen verzameld en kunnen bezoekers hierop
+                      stemmen. Eén van deze verhalen met de meeste stemmen zal
+                      worden omgezet tot een korte ballet of opera voorstelling.
+                    </p>
+                    <p>
+                      <span className={styles.bold}>Waarom nog wachten? </span>
+                      Deel jouw verhaal en laat je horen, net zoals Opera Ballet
+                      Vlaanderen. Deel jouw verhaal en laat je horen, net zoals
+                      Opera Ballet Vlaanderen.
                     </p>
                     <div className={styles.nav}>
                       <Link

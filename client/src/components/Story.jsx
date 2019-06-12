@@ -1,5 +1,5 @@
 import React from "react";
-import { observer } from "mobx-react";
+import { observer, inject } from "mobx-react";
 import { Link } from "react-router-dom";
 import { ROUTES } from "../constants";
 
@@ -29,4 +29,4 @@ const Stories = () => {
   );
 };
 
-export default observer(Stories);
+export default inject(`storiesTemplateStore`)(observer(Stories));

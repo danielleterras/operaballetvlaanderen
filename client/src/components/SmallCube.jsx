@@ -63,11 +63,9 @@ class SmallCube extends Component {
           <div className={styles.container} style={containerStyle}>
             <div className={styles.light}>
               <div className={styles.cube} style={cubeStyle}>
-                {Array(6)
-                  .fill()
-                  .map(() => (
-                    <figure style={surfaceStyle} />
-                  ))}
+                {["a", "b", "c", "d", "e", "f"].map(key => (
+                  <figure key={key} style={surfaceStyle} />
+                ))}
               </div>
             </div>
           </div>

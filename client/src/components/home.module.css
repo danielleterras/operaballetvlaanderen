@@ -301,9 +301,6 @@ p {
   align-items: center;
   flex-direction: column;
 }
-.secondtitle {
-  float: left;
-}
 
 .bold {
   font-weight: bold;

@@ -10,4 +10,8 @@ const StoryTemplateSchema = mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model('StoryTemplate', StoryTemplateSchema);
+module.exports = mongoose.model(
+  'StoryTemplate',
+  StoryTemplateSchema,
+  'storiesTemplates'
+);
