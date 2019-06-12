@@ -9,6 +9,7 @@ import SmallCube from "./SmallCube";
 
 import styles from "./home.module.css";
 import layout from "./layout.module.css";
+import button from "./../assets/button.gif";
 
 import mouse from "./../assets/scroll_icon.svg";
 
@@ -36,7 +37,18 @@ class FullpageWrapper extends Component {
               <div className="section">
                 <div className={styles.flex}>
                   <div className={styles.cube2}>
-                    <SmallCube />
+                    <a
+                      href="https://operaballet.be/en"
+                      className={styles.click}
+                    >
+                      <img
+                        src={button}
+                        height="60"
+                        width="90"
+                        className={styles.img}
+                      />
+                      <SmallCube />
+                    </a>
                   </div>
                   <div className={styles.paragraph}>
                     <h2 className={styles.secondtitle}>

@@ -12,6 +12,10 @@
   background-color: white;
 }
 
+ul {
+  list-style-type: square;
+}
+
 .button {
     font-size: 16px;
     font-weight: bold;

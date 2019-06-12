@@ -91,6 +91,18 @@ p {
   z-index: 0;
 }
 
+.click {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.img {
+  margin-bottom: 2rem;
+  margin-top: -2rem;
+}
+
 .cube3{
   background-image: url("../assets/step_3.svg");
   background-repeat: no-repeat;
