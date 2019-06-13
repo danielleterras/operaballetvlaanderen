@@ -45,6 +45,12 @@ p {
     margin: 0rem;
 }
 
+.navigation:hover {
+  color: #F72442;
+  background-color: white;
+  transition: 0.5s;
+}
+
 .nav {
   margin-top: 2.5rem;
   margin-bottom: 2rem;
@@ -105,11 +111,14 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
 }
 
 .img {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   margin-top: -2rem;
+
+  
 }
 
 .cube3{
@@ -355,45 +364,6 @@ p {
 }
 
 @media screen and (max-width: 1100px) {
-  /* .paragraph {
-    width: 700px;
-    margin-left: -40rem;
-    margin-top: 15rem;
-  } 
-  .cube1, .cube2, .cube3, .cube4, .cube5, .cube6, .cube7 {
-    height: 300px;
-    width:  300px;
-    margin-left: 8rem;
-  }
-
-}
-
-@media screen and (max-width: 800px) {
-  .paragraph {
-    width: 600px;
-    margin-left: -25rem;
-    margin-top: 25rem;
-    height:500px;
-    overflow:auto;
-  } 
-  .cube1, .cube2, .cube3, .cube4, .cube5, .cube6, .cube7 {
-    margin-left: 5rem;
-    margin-top: -35rem;
-  }
-}
-@media screen and (max-width: 700px) {
-  .paragraph {
-    margin-left: -20rem;
-    width: 500px;
-    height:300px;
-    overflow:auto;
-  } 
-  .cube1, .cube2, .cube3, .cube4, .cube5, .cube6, .cube7 {
-    margin-left: 0rem;
-    margin-top: -25rem;
-  }
-}
-@media screen and (max-width: 520px) { */
   .paragraph {
     width: 600px;
     margin-left: -40rem;

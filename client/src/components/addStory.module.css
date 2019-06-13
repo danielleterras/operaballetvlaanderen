@@ -206,20 +206,6 @@ input[type="radio"]:checked + span {
   height: 150px;
 }
 }
-/* @media screen and (max-width: 1024px) {
-.paragraph {
-  width: 400px;
-  margin-left: -50rem;
-  margin-top: 15rem;
-}
-.paragraphText {
-  width: 650px;
-  padding-right: 5rem;
-  margin-left: -40rem;
-  margin-top: 20rem;
-}
-
-} */
 
 @media screen and (max-width: 800px) {
 .paragraph {
@@ -318,16 +304,3 @@ h2 {
 }
 
 }
-/* @media screen and (max-width: 430px) {
-.paragraphText {
-  width: 200px;
-  margin-left: -12rem;
-  z-index: 1;
-  margin-top: 5rem;
-}
-.textField {
-  width: 220px;
-  height: 200px;
-}
-
-} */

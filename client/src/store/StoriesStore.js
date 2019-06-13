@@ -25,7 +25,6 @@ class StoriesStore {
 		this.stories.push(newStory);
 		const storyValues = await this.api.create(newStory);
 		newStory.updateFromServer(storyValues);
-
 		return newStory;
 	};
 
