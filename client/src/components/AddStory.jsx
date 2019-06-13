@@ -120,7 +120,8 @@ const AddStory = ({ storiesStore, history }) => {
                     <option value="Fantasie">Fantasie</option>
                     <option value="Misdaad">Misdaad</option>
                     <option value="Mysterie">Mysterie</option>
-                    <option value="Science fiction">Science fiction</option>
+                    <option value="Sci-fi">Science fiction</option>
+                    <option value="Horror">Science fiction</option>
                   </select>
                 </div>
               </div>

@@ -15,7 +15,7 @@ import layout from "./layout.module.css";
 
 const CreateStory = ({ storiesStore, storiesTemplateStore, history }) => {
   const redirect = id => {
-    history.push(`/stories/${id}`);
+    history.push(`/story/${id}`);
   };
 
   storiesTemplateStore.templates.map(test => console.log(test));
@@ -31,6 +31,10 @@ const CreateStory = ({ storiesStore, storiesTemplateStore, history }) => {
     const generatedStory = storiesTemplateStore.templates.find(
       check => check.genre === genreInput.current.value
     );
+
+    const regex = /\[naam\]/g;
+    const expr = /\[personage\]/g;
+
     console.log(generatedStory.story);
     storiesStore
       .addStory({
@@ -40,9 +44,11 @@ const CreateStory = ({ storiesStore, storiesTemplateStore, history }) => {
         author: authorInput.current.value,
         personage: personageInput.current.value,
         story: generatedStory.story
+          .replace(regex, authorInput.current.value)
+          .replace(expr, personageInput.current.value)
       })
       .then(story => {
-        redirect(story);
+        redirect(story.id);
       });
     titleInput.current.value = "";
     genreInput.current.value = "";
@@ -119,7 +125,8 @@ const CreateStory = ({ storiesStore, storiesTemplateStore, history }) => {
                     <option value="Fantasie">Fantasie</option>
                     <option value="Misdaad">Misdaad</option>
                     <option value="Mysterie">Mysterie</option>
-                    <option value="Science fiction">Science fiction</option>
+                    <option value="Sci-fi">Science fiction</option>
+                    <option value="Horror">Science fiction</option>
                   </select>
                 </div>
               </div>

@@ -3,6 +3,5 @@ export const ROUTES = {
   stories: `/stories`,
   storyDetail: `/story/:id`,
   addStory: `/add-story`,
-  createStory: `/create-story`,
-  story: `/story`
+  createStory: `/create-story`
 };
