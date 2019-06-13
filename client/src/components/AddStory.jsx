@@ -19,18 +19,25 @@ const AddStory = ({ storiesStore, history }) => {
     history.push(`/story/${id}`);
   };
 
+  let genre = "";
+
   const genreInput = React.createRef();
   const authorInput = React.createRef();
   const titleInput = React.createRef();
   const storyInput = React.createRef();
   const synopsysInput = React.createRef();
 
+  const handleChangeGenre = e => {
+    genre = e.currentTarget.value;
+    return genre;
+  };
+
   const handleSubmit = e => {
     e.preventDefault();
     storiesStore
       .addStory({
         title: titleInput.current.value,
-        genre: genreInput.current.value,
+        genre: genre,
         author: authorInput.current.value,
         story: storyInput.current.value,
         synopsys: synopsysInput.current.value
@@ -42,7 +49,7 @@ const AddStory = ({ storiesStore, history }) => {
     console.log(redirect);
 
     titleInput.current.value = "";
-    genreInput.current.value = "";
+    genre = "";
     authorInput.current.value = "";
     storyInput.current.value = "";
     synopsysInput.current.value = "";
@@ -108,21 +115,58 @@ const AddStory = ({ storiesStore, history }) => {
                 <div className={styles.paragraph}>
                   <p>Omschrijf je thema.</p>
                   <h2>Welke stijl schrijf je?</h2>
-                  <select
-                    id="genre"
-                    name="genre"
-                    className={styles.inputField}
-                    ref={genreInput}
-                    required
-                  >
-                    <option>-- Select a category --</option>
-                    <option value="Romantiek">Romantiek</option>
-                    <option value="Fantasie">Fantasie</option>
-                    <option value="Misdaad">Misdaad</option>
-                    <option value="Mysterie">Mysterie</option>
-                    <option value="Sci-fi">Science fiction</option>
-                    <option value="Horror">Science fiction</option>
-                  </select>
+                  <div className={styles.genreButtons}>
+                    <label>
+                      <input
+                        type="radio"
+                        value="Romantiek"
+                        onChange={handleChangeGenre}
+                      />
+                      <span>Romantiek</span>
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        value="Fantasie"
+                        onChange={handleChangeGenre}
+                      />
+                      <span>Fantasie</span>
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        value="Misdaad"
+                        onChange={handleChangeGenre}
+                      />
+                      <span>Misdaad</span>
+                    </label>
+                  </div>
+                  <div className={styles.genreButtons}>
+                    <label>
+                      <input
+                        type="radio"
+                        value="Mysterie"
+                        onChange={handleChangeGenre}
+                      />
+                      <span>Mysterie</span>
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        value="Sci-fi"
+                        onChange={handleChangeGenre}
+                      />
+                      <span>Science-fiction</span>
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        value="Horror"
+                        onChange={handleChangeGenre}
+                      />
+                      <span>Horror</span>
+                    </label>
+                  </div>
                 </div>
               </div>
             </div>
