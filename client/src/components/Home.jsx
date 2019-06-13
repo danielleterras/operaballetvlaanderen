@@ -45,6 +45,7 @@ class FullpageWrapper extends Component {
                         src={button}
                         height="60"
                         width="90"
+                        alt="Click me"
                         className={styles.img}
                       />
                       <SmallCube />
@@ -115,8 +116,7 @@ class FullpageWrapper extends Component {
                     <p>
                       <span className={styles.bold}>Waarom nog wachten? </span>
                       Deel jouw verhaal en laat je horen, net zoals Opera Ballet
-                      Vlaanderen. Deel jouw verhaal en laat je horen, net zoals
-                      Opera Ballet Vlaanderen.
+                      Vlaanderen.
                     </p>
                     <div className={styles.nav}>
                       <Link

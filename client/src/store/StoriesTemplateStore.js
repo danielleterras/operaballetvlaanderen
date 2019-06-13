@@ -27,7 +27,6 @@ class StoriesTemplateStore {
   };
 
   _addStoryTemplate = values => {
-    console.log(values);
     const storyTemplate = new StoryTemplate(values);
     storyTemplate.updateFromServer(values);
     runInAction(() => this.templates.push(storyTemplate));

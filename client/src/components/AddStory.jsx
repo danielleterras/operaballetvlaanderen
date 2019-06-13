@@ -21,7 +21,6 @@ const AddStory = ({ storiesStore, history }) => {
 
   let genre = "";
 
-  const genreInput = React.createRef();
   const authorInput = React.createRef();
   const titleInput = React.createRef();
   const storyInput = React.createRef();
@@ -120,6 +119,7 @@ const AddStory = ({ storiesStore, history }) => {
                       <input
                         type="radio"
                         value="Romantiek"
+                        name="genre"
                         onChange={handleChangeGenre}
                       />
                       <span>Romantiek</span>
@@ -128,6 +128,7 @@ const AddStory = ({ storiesStore, history }) => {
                       <input
                         type="radio"
                         value="Fantasie"
+                        name="genre"
                         onChange={handleChangeGenre}
                       />
                       <span>Fantasie</span>
@@ -136,6 +137,7 @@ const AddStory = ({ storiesStore, history }) => {
                       <input
                         type="radio"
                         value="Misdaad"
+                        name="genre"
                         onChange={handleChangeGenre}
                       />
                       <span>Misdaad</span>
@@ -146,6 +148,7 @@ const AddStory = ({ storiesStore, history }) => {
                       <input
                         type="radio"
                         value="Mysterie"
+                        name="genre"
                         onChange={handleChangeGenre}
                       />
                       <span>Mysterie</span>
@@ -154,6 +157,7 @@ const AddStory = ({ storiesStore, history }) => {
                       <input
                         type="radio"
                         value="Sci-fi"
+                        name="genre"
                         onChange={handleChangeGenre}
                       />
                       <span>Science-fiction</span>
@@ -162,6 +166,7 @@ const AddStory = ({ storiesStore, history }) => {
                       <input
                         type="radio"
                         value="Horror"
+                        name="genre"
                         onChange={handleChangeGenre}
                       />
                       <span>Horror</span>

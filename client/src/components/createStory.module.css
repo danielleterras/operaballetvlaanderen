@@ -110,7 +110,7 @@
     grid-template-columns: repeat(3, 1fr);
   }
   
-  input[type="radio"] {
+  /* input[type="radio"] {
     display: none;
   
   }
@@ -124,9 +124,9 @@
   input[type="radio"] + span:hover {
     border: 1px solid #F72442;
     padding: 1rem;
-    {/*box-shadow: 0px 0px 40px 20px #F72442;*/}
+    box-shadow: 0px 0px 40px 20px #F72442;
   
-  }
+  } */
 
   .paragraph {
     width: 600px;

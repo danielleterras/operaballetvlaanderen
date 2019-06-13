@@ -26,6 +26,7 @@ ul {
 
 .intro {
     text-align: left;
+    margin-bottom: 3rem;
 }
 
 .template {
@@ -48,6 +49,10 @@ ul {
     background-color: #4F152D;
     padding: 0.5rem;
     font-size: 16px;
+}
+
+.italic {
+    font-style: italic;
 }
 
 .votes {
@@ -81,6 +86,11 @@ ul {
   font-size: 16px;
   text-decoration: none;
   margin-top: 1rem;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
 }
 
 .link {

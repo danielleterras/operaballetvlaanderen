@@ -11,25 +11,30 @@ import { ROUTES } from "../constants";
 import mouse from "./../assets/scroll_icon.svg";
 
 import styles from "./createStory.module.css";
-import layout from "./layout.module.css";
 
 const CreateStory = ({ storiesStore, storiesTemplateStore, history }) => {
   const redirect = id => {
     history.push(`/story/${id}`);
   };
 
+  let genreButtonInput = "";
+
   storiesTemplateStore.templates.map(test => console.log(test));
 
-  const genreInput = React.createRef();
   const authorInput = React.createRef();
   const titleInput = React.createRef();
   const synopsysInput = React.createRef();
   const personageInput = React.createRef();
 
+  const handleChangeGenre = e => {
+    genreButtonInput = e.currentTarget.value;
+    return genreButtonInput;
+  };
+
   const handleSubmit = e => {
     e.preventDefault();
     const generatedStory = storiesTemplateStore.templates.find(
-      check => check.genre === genreInput.current.value
+      check => check.genre === genreButtonInput
     );
 
     const regex = /\[naam\]/g;
@@ -39,7 +44,7 @@ const CreateStory = ({ storiesStore, storiesTemplateStore, history }) => {
     storiesStore
       .addStory({
         title: titleInput.current.value,
-        genre: genreInput.current.value,
+        genre: genreButtonInput,
         synopsys: synopsysInput.current.value,
         author: authorInput.current.value,
         personage: personageInput.current.value,
@@ -51,7 +56,7 @@ const CreateStory = ({ storiesStore, storiesTemplateStore, history }) => {
         redirect(story.id);
       });
     titleInput.current.value = "";
-    genreInput.current.value = "";
+    genreButtonInput = "";
     synopsysInput.current.value = "";
     authorInput.current.value = "";
     personageInput.current.value = "";
@@ -80,6 +85,7 @@ const CreateStory = ({ storiesStore, storiesTemplateStore, history }) => {
                     placeholder="Typ hier je naam"
                     className={styles.inputField}
                     ref={authorInput}
+                    required
                   />
                 </div>
               </div>
@@ -101,8 +107,9 @@ const CreateStory = ({ storiesStore, storiesTemplateStore, history }) => {
                     placeholder="Typ hier je personage"
                     className={styles.inputField}
                     ref={personageInput}
+                    required
                   />
-                  <p>*Koningin, weduwe, prins detective, wetenschapper,...</p>
+                  <p>*Koningin, weduwe, prins, detective, wetenschapper,...</p>
                 </div>
               </div>
             </div>
@@ -114,20 +121,58 @@ const CreateStory = ({ storiesStore, storiesTemplateStore, history }) => {
                 <div className={styles.paragraph}>
                   <p>Omschrijf je thema.</p>
                   <h2>Welke stijl verkies je?</h2>
-                  <select
-                    id="genre"
-                    name="genre"
-                    className={styles.inputField}
-                    ref={genreInput}
-                  >
-                    <option>-- Select a category --</option>
-                    <option value="Romantiek">Romantiek</option>
-                    <option value="Fantasie">Fantasie</option>
-                    <option value="Misdaad">Misdaad</option>
-                    <option value="Mysterie">Mysterie</option>
-                    <option value="Sci-fi">Science fiction</option>
-                    <option value="Horror">Horror</option>
-                  </select>
+                  <div className={styles.genreButtons}>
+                    <label>
+                      <input
+                        type="radio"
+                        value="Romantiek"
+                        onChange={handleChangeGenre}
+                      />
+                      <span>Romantiek</span>
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        value="Fantasie"
+                        onChange={handleChangeGenre}
+                      />
+                      <span>Fantasie</span>
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        value="Misdaad"
+                        onChange={handleChangeGenre}
+                      />
+                      <span>Misdaad</span>
+                    </label>
+                  </div>
+                  <div className={styles.genreButtons}>
+                    <label>
+                      <input
+                        type="radio"
+                        value="Mysterie"
+                        onChange={handleChangeGenre}
+                      />
+                      <span>Mysterie</span>
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        value="Sci-fi"
+                        onChange={handleChangeGenre}
+                      />
+                      <span>Science-fiction</span>
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        value="Horror"
+                        onChange={handleChangeGenre}
+                      />
+                      <span>Horror</span>
+                    </label>
+                  </div>
                 </div>
               </div>
             </div>
@@ -146,6 +191,7 @@ const CreateStory = ({ storiesStore, storiesTemplateStore, history }) => {
                     placeholder="Typ hier je titel"
                     className={styles.inputField}
                     ref={titleInput}
+                    required
                   />
                 </div>
               </div>
@@ -169,6 +215,7 @@ const CreateStory = ({ storiesStore, storiesTemplateStore, history }) => {
                     placeholder="Typ hier je anekdote"
                     className={styles.textField}
                     ref={synopsysInput}
+                    required
                   />
                   <input
                     type="submit"
