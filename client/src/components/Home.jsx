@@ -102,7 +102,7 @@ class FullpageWrapper extends Component {
 											Hier op deze website is het ook mogelijk om een verhaal te
 											schrijven. Wij voorzien twee opties om een verhaal te
 											schrijven: Schrijf je verhaal: schrijf zelf je verhaal
-											Creëer je verhaal: heb je geen inspiratie voor een
+											Genereer je verhaal: heb je geen inspiratie voor een
 											volledig verhaal te schrijven? Bij deze optie geef je een
 											paar stukjes input mee, en hiermee maken wij een verhaal
 											voor jou.

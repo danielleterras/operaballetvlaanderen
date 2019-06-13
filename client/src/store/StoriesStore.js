@@ -48,8 +48,9 @@ class StoriesStore {
 	};
 
 	getById = id => {
-		this.api.getById(id).then(d => console.log(d));
 		const story = this.stories.find(check => check.id === id);
+		this.api.getById(id).then(d => console.log(d));
+		console.log(story);
 		return story;
 	};
 }
