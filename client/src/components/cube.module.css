@@ -153,7 +153,7 @@ body {
   }
 
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
   .cube figure {
     height: 102px;
     width: 102px;

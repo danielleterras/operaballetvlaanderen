@@ -378,8 +378,8 @@ p {
 
 @media screen and (max-width: 420px) {
   .paragraph {
-  width: 400px;
-  margin-left: -15rem;
+  width: 300px;
+  margin-left: -10rem;
   height:500px;
   margin-top: 12rem;
 
@@ -388,8 +388,8 @@ p {
   .cube2, .cube3, .cube4, .cube5, .cube6, .cube7 {
     height: 120px;
     width: 120px;
-    margin-left: 10rem;
-    margin-top: -37rem;
+    margin-left: 2rem;
+    margin-top: -18rem;
   }
 }
 
@@ -399,18 +399,19 @@ p {
   margin-top: 12rem;
   } 
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
   .paragraph {
     width:400px;
     margin-left: -12rem;
-    height:350px;
-    margin-top: 8rem;
+    height:500px;
+    margin-top: 5rem;
+    overflow: auto;
   } 
   .cube2, .cube3, .cube4, .cube5, .cube6, .cube7 {
     height: 120px;
     width: 120px;
     margin-left: 6rem;
-    margin-top: -25rem;
+    margin-top: -22rem;
   }
   .maintitle{
     font-size: 1.5rem;
