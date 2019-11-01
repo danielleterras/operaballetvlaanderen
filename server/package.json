@@ -10,7 +10,7 @@
     "eslint": "^5.15.3",
     "eslint-config-devine": "^2.0.1",
     "express": "^4.16.4",
-    "mongoose": "^5.4.19"
+    "mongoose": "^5.7.5"
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
